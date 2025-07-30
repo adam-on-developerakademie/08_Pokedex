@@ -4,11 +4,38 @@ async function loadPokemonNames() {
     x.innerHTML = `<br/>Pokemon IndexNr.:${i}` + x.innerHTML;
     await delay(100);
     i > 62 ? (i = -1) : (i = i);
-    x.innerHTML = x.innerHTML.slice(0, 1000);
+    x.innerHTML = x.innerHTML.slice(0, 1300);
     document.getElementById("mainDivId3").innerHTML = x.innerHTML.length;
   }
 }
-loadPokemonNames();
+//loadPokemonNames();
+
+async function putIntoArray(){
+
+     await delay(10000);
+     x=document.getElementById("mainDivId2").innerHTML
+   // console.log(x.replaceAll('<br>','";"'))
+}
+//putIntoArray()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 async function delay(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
@@ -23,5 +50,5 @@ async function processWithDelay(items) {
   console.log("Schleife abgeschlossen");
 }
 
-const myArray = [1, 2, 3, 4, 5];
-processWithDelay(myArray);
+//const myArray = [1, 2, 3, 4, 5];
+//processWithDelay(myArray);
