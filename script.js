@@ -1,7 +1,20 @@
 async function init() {
-  await getAllPokemons();
-  await getPokemonDetails(10)
+  loadPokedex();
+  console.log("geladen");
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ////////////////////////////////////////////////////////////////////
@@ -40,9 +53,8 @@ async function processWithDelay(items) {
 //const myArray = [1, 2, 3, 4, 5];
 //processWithDelay(myArray);
 
-function istrue (a){
-  console.log(a ? true:false)
-  console.log(a )
-return a ? true:false
-
+function istrue(a) {
+  console.log(a ? true : false);
+  console.log(a);
+  return a ? true : false;
 }

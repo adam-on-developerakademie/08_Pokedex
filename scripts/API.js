@@ -17,9 +17,9 @@ async function getAllPokemons() {
 }
 
 async function getPokemonDetails(n) { 
-  if (pokemons.length > 0) {
+  if (pokemons.length > 0) {k = nUpdate(n);
     try {
-      for (j = 0; j < n; j++) {
+      for (j = 0 + k; j < n + k ; j++) {
         let qLink = pokemons[j].url;
         const Response = await fetch(qLink);
         const data = await Response.json();
@@ -32,5 +32,17 @@ async function getPokemonDetails(n) {
         eval(propertie)
         let wenn=eval(propertieObligatory)}}}
     } catch (error) { console.log("Fehler: " + error);}}
-  await myPokemonList(n)
+  await savePokedex();
+  await myPokemonList(nUpdate(n));
+}
+
+function nUpdate(n) {
+  for (i = 0; i < allPokemons; i++) {
+    if (Object.keys(pokemons[i]).length > 2) {
+    } else {
+      n = i;
+      i = allPokemons;
+    }
+  }
+  return n;
 }
