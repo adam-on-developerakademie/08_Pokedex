@@ -1,3 +1,10 @@
+async function init() {
+  await getAllPokemons();
+  await getPokemonDetails(20)
+}
+
+
+////////////////////////////////////////////////////////////////////
 async function loadPokemonNames() {
   let x = document.getElementById("mainDivId2");
   for (i = 0; i < 65; i++) {
@@ -10,32 +17,12 @@ async function loadPokemonNames() {
 }
 //loadPokemonNames();
 
-async function putIntoArray(){
-
-     await delay(10000);
-     x=document.getElementById("mainDivId2").innerHTML
-   // console.log(x.replaceAll('<br>','";"'))
+async function putIntoArray() {
+  await delay(10000);
+  x = document.getElementById("mainDivId2").innerHTML;
+  // console.log(x.replaceAll('<br>','";"'))
 }
 //putIntoArray()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 async function delay(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));

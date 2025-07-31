@@ -6,22 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokedex!</title>
     <link rel="shortcut icon" href="./assets/icons/monster-ball.png" type="image/x-icon">
-    <!--  <link rel="stylesheet" href="./style.css"> -->
-    <!--     <link rel="stylesheet" href="./styles/mainStyle.css"> -->
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./styles/mainStyle.css">
 </head>
 
-<body onload="">
+<body onload="init()">
 
     <header>
     </header>
-   <button onclick="getPokemons(5)">holle weitere 5 Pokemon</button>
+    <button onclick="getPokemons(20), myPokemonList()">holle weitere 5 Pokemon</button>
     <main>
         <div id="mainDivId1">Pokemon load:
             <div id="mainDivId2"><br />&nbsp;&Tab;Pikachu</div>
             <div id="mainDivId3"></div>
+            
 
         </div>
-     
+
     </main>
 
     <footer>
@@ -30,5 +31,6 @@
 </body>
 <script src="./script.js"></script>
 <script src="./scripts/db.js"></script>
+<script src="./scripts/render.js"></script>
 
 </html>

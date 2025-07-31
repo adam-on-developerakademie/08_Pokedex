@@ -7,10 +7,15 @@
   background-color: white;
 }
 #mainDivId2 {
-  width: 300px;
+  width: 1300px;
   height: 100%;
   background-color: rgba(0, 255, 255, 0.125);
   overflow-wrap: break-word;
   overflow-y: hidden;
   
+}
+
+.imageBig{
+  height: 50px;
+  width: 50px;
 }
