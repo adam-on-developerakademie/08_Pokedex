@@ -7,15 +7,11 @@
   background-color: white;
 }
 #mainDivId2 {
-  width: 1300px;
+  width: 100%;
   height: 100%;
   background-color: rgba(0, 255, 255, 0.125);
   overflow-wrap: break-word;
-  overflow-y: hidden;
+  overflow-y: auto;
   
 }
 
-.imageBig{
-  height: 50px;
-  width: 50px;
-}

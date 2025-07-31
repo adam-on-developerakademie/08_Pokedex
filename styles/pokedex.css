@@ -2,3 +2,40 @@
   display: flex;
   flex-wrap: wrap;
 }
+
+.pokeCard {
+  width: 200px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid black;
+
+  .imageLarge {
+    height: 100px;
+    width: 100px;
+  }
+  .cardHeader {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+  }
+    .cardName {
+    height: 30px;
+    width: 100%;
+    display: flex;
+    align-items:baseline;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+  }
+}
+
+.imageLarge {
+  height: 50px;
+  width: 50px;
+}

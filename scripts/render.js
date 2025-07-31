@@ -1,15 +1,16 @@
 async function myPokemonList(n) {
-  let myDiv = document.getElementById("pokedex");myDiv.innerHTML=''
-  //for (i = 0; i < pokemons.length; i++) 
-    for (i = 0; i < n; i++){
- myDiv.innerHTML+=`
- <br>Nr.${i+' '+ pokemons[i].name 
- //+ '  '+pokemons[i].url
-+'<img class="imageBig" src="'+pokemons[i].imageLarge+'">'
- } 
- 
- `
+  let myDiv = document.getElementById("pokedex");
+  myDiv.innerHTML = "";
+  for (i = 0; i < n; i++) {
+    myDiv.innerHTML += `
+ <div class="pokeCard">
+        <div class="cardHeader">   
+            <p>Nr.${i}</p>
+        </div>
+            
+        <img class="imageLarge" src="${pokemons[i].imageLarge}">
+        <p class="cardName">${fLetterUp(pokemons[i].name)}</p>
+ </div> 
+ `;
   }
 }
-
-
