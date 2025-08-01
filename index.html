@@ -7,19 +7,18 @@
     <title>Pokedex!</title>
     <link rel="shortcut icon" href="./assets/icons/monster-ball.png" type="image/x-icon">
     <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./styles/mainStyle.css">
+    <link rel="stylesheet" href="./styles/autoZoom.css">
     <link rel="stylesheet" href="./styles/pokedex.css">
-    <script src="./scripts/unload.js"></script>
 </head>
 
 <body onload="init()">
 
     <header>
     </header>
-    <button onclick="nUpdate(5), getPokemonDetails(5)">holle weitere 5 Pokemon</button>
     <main>
-        <div id="mainDivId1">Pokemon load:
-            <div id="mainDivId2"><br />&nbsp;&Tab;Pikachu
+        <div id="mainDivId1">
+            <button onclick="nUpdate(5), getPokemonDetails(5)">holle weitere 5 Pokemon</button>
+            <div id="pokedexArea">
                 <div id="pokedex"></div>
             </div>
 
@@ -36,4 +35,6 @@
 <script src="./script.js"></script>
 <script src="./scripts/render.js"></script>
 <script src="./scripts/functions.js"></script>
+<script src="./scripts/autoZoom.js"></script>
+
 </html>
