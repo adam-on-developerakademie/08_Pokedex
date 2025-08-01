@@ -1,0 +1,14 @@
+#sidbarId{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#reloadButtonID{
+    height: 100px;
+}
+
+.sidbarItem{
+    height: 100%;
+}
+

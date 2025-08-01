@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./styles/autoZoom.css">
     <link rel="stylesheet" href="./styles/pokedex.css">
+    <link rel="stylesheet" href="./styles/sidbar.css">
 </head>
 
 <body onload="init()">
@@ -17,7 +18,10 @@
     </header>
     <main>
         <div id="mainDivId1">
-            <button onclick="nUpdate(5), getPokemonDetails(5)">holle weitere 5 Pokemon</button>
+            <div id="sidbarId">
+            <button id="reloadButtonID" class="sidbarItem" onclick="reset()">Reset</button>
+            <button id="take100ButtonID" class="sidbarItem" onclick="getPokemon(20)">take next 20 Pokemons</button>
+            </div>
             <div id="pokedexArea">
                 <div id="pokedex"></div>
             </div>
