@@ -11,7 +11,7 @@ async function myPokemonList(n) {
         <img id="imageLargeId${i}" class="imageLarge" src="${pokemons[i].imageLarge}">
         <p class="cardName">${fLetterUp(pokemons[i].name)}</p>
         <div class="cardBottom">
-        <p class="cardType" >${pokemons[i].typeSlot1}</p>
+        <p class="cardType ${pokemons[i].typeSlot1}Type" >${pokemons[i].typeSlot1}</p>
         <p class="cardType" >${(pokemons[i].typeSlot2? pokemons[i].typeSlot2:'')}</p>
         </div>
  </div> 
