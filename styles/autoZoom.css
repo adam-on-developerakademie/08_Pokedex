@@ -1,4 +1,6 @@
 :root{
-    --pokeCardHigh: 300px;
-    --pokeCardWidth: 200px;
+    --pokeCardHeight: 176px;
+    --pokeCardWidth: 126px;
+    --imageLargeHeight: 100px;
+    --imageLargeWidth: 100px;
 }

@@ -1,42 +1,30 @@
+/* 
 let autoZoom = document.querySelector(":root");
-const OH = window.innerHeight;
-const OW = window.innerWidth;
+let startWidth = window.innerWidth;
 let CW = 1;
-let CH = 0;
+let sMod;
 
 window.addEventListener("resize", () => {
-  currentSize();
+  let sMod = window.innerWidth / startWidth;
+  startWidth = window.innerWidth;
+  pokeCardSizing(sMod);
+  imageLargeSizing(sMod);
 });
 
-function currentSize() {
-  if (CW == 1) {
-    if (OW < 500) {
-      CH = 140;
-      CW = 100;
-    } else {
-      CH = document.getElementById("pokeCardId0").offsetHeight;
-      CW = document.getElementById("pokeCardId0").offsetWidth;
-    }
-  }
-  let H = window.innerHeight;
-  let W = window.innerWidth;
-
-  //console.log(H + " x " + W);
-  //console.log(CH + " x " + CW);
-  // console.log(OH + " x " + OW);
-  // console.log(((CW * W) / OW / 2).toFixed(0) + "px");
-  // console.log(OW);
-
-  document.getElementById("pokeCardId4").style.width =
-    ((CW * (W + OW)) / 2 / OW).toFixed(0) + "px";
-  document.getElementById("pokeCardId4").style.height =
-    ((CH * (W + OW)) / 2 / OW).toFixed(0) + "px";
-  autoZoom.style.setProperty(
-    "--pokeCardHigh",
-    ((CH * (W + OW)) / 2 / OW).toFixed(0) + "px"
-  );
-  autoZoom.style.setProperty(
-    "--pokeCardWidth",
-    ((CW * (W + OW)) / 2 / OW).toFixed(0) + "px"
-  );
+function pokeCardSizing(sMod) {
+  let ratio =60/90//=63/88;
+  let y = document.getElementById("pokeCardId0").offsetHeight;
+  x = y * sMod * ratio;
+  autoZoom.style.setProperty("--pokeCardWidth", x + "px");
+  autoZoom.style.setProperty("--pokeCardHeight", (x/ratio) + "px");
+  console.log(sMod + "  &  " + x + "  &  " + y);
 }
+
+function imageLargeSizing(sMod) {
+  let x = document.getElementById("imageLargeId0").offsetWidth;
+  let y = document.getElementById("imageLargeId0").offsetHeight;
+  autoZoom.style.setProperty("--imageLargeWidth", (x + x * sMod) / 2 + "px");
+  autoZoom.style.setProperty("--imageLargeHeight", (y + y * sMod) / 2 + "px");
+  console.log(sMod + "  &  " + x + "  &  " + y);
+}
+ */

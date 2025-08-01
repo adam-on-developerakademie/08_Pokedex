@@ -8,11 +8,11 @@ async function myPokemonList(n) {
             <p>Nr.${i+1}</p>
         </div>
             
-        <img class="imageLarge" src="${pokemons[i].imageLarge}">
+        <img id="imageLargeId${i}" class="imageLarge" src="${pokemons[i].imageLarge}">
         <p class="cardName">${fLetterUp(pokemons[i].name)}</p>
         <div class="cardBottom">
-        <p>${pokemons[i].typeSlot1}</p>
-        <p>${pokemons[i].typeSlot2}</p>
+        <p class="cardType" >${pokemons[i].typeSlot1}</p>
+        <p class="cardType" >${(pokemons[i].typeSlot2? pokemons[i].typeSlot2:'')}</p>
         </div>
  </div> 
  `;

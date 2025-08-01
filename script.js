@@ -1,7 +1,7 @@
 async function init() {
   await loadPokedex();
   await myPokemonList(pokemons.length) 
-
+  console.log(pokemons);
 }
 
 
