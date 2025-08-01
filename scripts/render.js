@@ -3,13 +3,17 @@ async function myPokemonList(n) {
   myDiv.innerHTML = "";
   for (i = 0; i < n; i++) {
     myDiv.innerHTML += `
- <div id="pokeCardId${i}" class="pokeCard">
+ <div id="pokeCardId${i}" class="pokeCard ${pokemons[i].typeSlot1}">
         <div class="cardHeader">   
             <p>Nr.${i+1}</p>
         </div>
             
         <img class="imageLarge" src="${pokemons[i].imageLarge}">
         <p class="cardName">${fLetterUp(pokemons[i].name)}</p>
+        <div class="cardBottom">
+        <p>${pokemons[i].typeSlot1}</p>
+        <p>${pokemons[i].typeSlot2}</p>
+        </div>
  </div> 
  `;
   }
