@@ -1,4 +1,25 @@
-body {
+@font-face {
+  font-family: "Pokemon";
+  src: url("./assets/fonts/Pokemon.ttf");
+}
+
+@font-face {
+  font-family: "Pokemon";
+  font-weight: bold;
+  src: url("./assets/fonts/Pokemon Bold.ttf");
+}
+
+@font-face {
+  font-family: "Birthstone-Regular";
+  src: url("./assets/fonts/Birthstone-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Domine-VariableFont_wght";
+  src: url("/assets/fonts/Domine/Domine-VariableFont_wght.ttf");
+}
+
+Domine-VariableFont_wght.ttf body {
   margin: 0;
   scroll-behavior: smooth;
   display: flex;
@@ -27,6 +48,7 @@ main {
 }
 
 footer {
+  font-family: Birthstone-Regular;
   height: 5vh;
   width: 100%;
   background-color: rgba(99, 99, 99, 0.3);
@@ -42,4 +64,18 @@ footer {
   display: flex;
 
   background-color: white;
+}
+#findId {
+  display: none;
+  font-family: Domine-VariableFont_wght;
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  width: 400px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 }

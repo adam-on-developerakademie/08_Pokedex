@@ -38,6 +38,8 @@
     width: min(25px 50px 100px);
   }
   .cardHeader {
+    font-family: Pokemon;
+    font-weight: bold;
     padding-top: 5px;
     height: min(25px, 35px);
     width: 100%;
@@ -46,6 +48,11 @@
     padding-left: 30px;
   }
   .cardName {
+    font-family: Pokemon;
+    text-shadow: rgba(255, 255, 255, 0.5) -1px -1px 0px,
+      rgb(255, 255, 255, 0.5) 1px -1px 0px, rgb(255, 255, 255, 0.5) -1px 1px 0px,
+      rgb(255, 255, 255, 0.5) 1px 1px 0px;
+    font-weight: bold;
     height: 30px;
     width: 100%;
     display: flex;
@@ -53,7 +60,7 @@
     justify-content: center;
     padding: 0;
     margin: 0;
-    font-size: min(14px 24px);
+    font-size: min(16px 24px);
     font-weight: bold;
   }
 }
@@ -66,6 +73,7 @@
 }
 
 .cardBottom {
+  overflow-wrap: break-word;
   height: 20px;
   width: 100%;
   display: flex;
@@ -75,11 +83,45 @@
 }
 
 .cardType {
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 7px;
+  color: white;
+  text-align: center;
+  text-shadow: rgb(0, 0, 0) -1px -1px 0px, rgb(0, 0, 0) 1px -1px 0px,
+    rgb(0, 0, 0) -1px 1px 0px, rgb(0, 0, 0) 1px 1px 0px;
   overflow: hidden;
   margin: 0;
   padding: 0;
   padding-left: 5px;
   padding-right: 5px;
+}
+
+.filterButton {
+  font-family: Pokemon;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 7px;
+  color: white;
+   overflow-wrap: break-word;
+  text-align: center;
+  text-shadow: rgb(0, 0, 0) -1px -1px 0px, rgb(0, 0, 0) 1px -1px 0px,
+    rgb(0, 0, 0) -1px 1px 0px, rgb(0, 0, 0) 1px 1px 0px;
+ ;
+}
+.filterButton:hover {
+  cursor: pointer;
+  transform: scale(1.03);
+  transition-duration: 0.0s;
+  box-shadow: 0px 0px 0px 3px #999;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.sidbarItem {
+  font-family: Pokemon;
+  font-weight: 500;
 }
 
 .imageLarge {
@@ -99,7 +141,7 @@
 .water {
   background-color: #5081c3;
 }
-.flaying {
+.flying {
   background-color: #3a60a9;
 }
 .grass {
@@ -136,8 +178,11 @@
   background-color: #86538c;
 }
 .steel {
-  background-color: #5B8196;
+  background-color: #5b8196;
 }
 .fairy {
-  background-color: #DA97C3;
+  background-color: #da97c3;
+}
+.all {
+  background-color: #000000;
 }

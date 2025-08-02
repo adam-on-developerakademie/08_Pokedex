@@ -19,8 +19,35 @@
     <main>
         <div id="mainDivId1">
             <div id="sidbarId">
-            <button id="reloadButtonID" class="sidbarItem" onclick="reset()">Reset</button>
-            <button id="take100ButtonID" class="sidbarItem" onclick="getPokemon(20)">take next 20 Pokemons</button>
+                <button id="take100ButtonID" class="sidbarItem" onclick="getPokemon(20)">take next 20 Pokemons</button>
+                <div id="typesBar" class=sidbarItem>
+                    <p class="find filterButton" onclick=" myPokemonList(pokemons.length)">find by name</p>
+                    <p class="all filterButton" onclick=" myPokemonList(pokemons.length)">all together</p>
+                    <p class="normal filterButton" onclick="findTyp('normal')">Normal</p>
+                    <p class="fire filterButton" onclick="findTyp('fire')">Fire</p>
+                    <p class="fighting filterButton" onclick="findTyp('fighting')">Fighting</p>
+                    <p class="water filterButton" onclick="findTyp('water')">Water</p>
+                    <p class="flying filterButton" onclick="findTyp('flying')">Flying</p>
+                    <p class="grass filterButton" onclick="findTyp('grass')">Grass</p>
+                    <p class="poison filterButton" onclick="findTyp('poison')">Poison</p>
+                    <p class="electric filterButton" onclick="findTyp('electric')">Electric</p>
+                    <p class="ground filterButton" onclick="findTyp('ground')">Ground</p>
+                    <p class="psychic filterButton" onclick="findTyp('psychic')">Psychic</p>
+                    <p class="rock filterButton" onclick="findTyp('rock')">Rock</p>
+                    <p class="ice filterButton" onclick="findTyp('ice')">Ice</p>
+                    <p class="bug filterButton" onclick="findTyp('bug')">Bug</p>
+                    <p class="dragon filterButton" onclick="findTyp('dragon')">Dragon</p>
+                    <p class="ghost filterButton" onclick="findTyp('ghost')">Ghost</p>
+                    <p class="dark filterButton" onclick="findTyp('dark')">Dark</p>
+                    <p class="steel filterButton" onclick="findTyp('steel')">Steel</p>
+                    <p class="fairy filterButton" onclick="findTyp('fairy')">Fairy</p>
+
+                </div>
+                <button id="reloadButtonID" class="sidbarItem" onclick="reset()">Reset</button>
+            </div>
+            <div id=findId>
+                <input  class='find' type="text" placeholder="Please enter at least 3 characters to search.">
+                <button class='find' type="submit" onclick="find(Value)">Search</button>
             </div>
             <div id="pokedexArea">
                 <div id="pokedex"></div>
