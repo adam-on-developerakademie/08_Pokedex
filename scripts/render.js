@@ -35,7 +35,7 @@ async function myPokemonList(n) {
 
 function template(i) {
   x = `
- <div id="pokeCardId${i}" class="pokeCard ${pokemons[i].typeSlot1}">
+ <div id="pokeCardId${i}" class="pokeCard ${pokemons[i].typeSlot1}Card">
         <div class="cardHeader">   
             <p>Nr.${i + 1}</p>
         </div>
