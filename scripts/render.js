@@ -10,7 +10,7 @@ async function findTyp(x) {
   let myDiv = document.getElementById("pokedex");
   myDiv.innerHTML = "";
   for (i = 0; i < pokemons.length; i++) {
-    if(pokemons[i].typeSlot1==x){
+    if(pokemons[i].typeSlot1==x||pokemons[i].typeSlot2==x){
     myDiv.innerHTML +=template(i)}
   }
 }
@@ -23,9 +23,6 @@ async function find() {
     myDiv.innerHTML +=template(i)}
   }
 }
-
-
-
 
 
 function template(i){

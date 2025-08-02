@@ -1,11 +1,14 @@
 async function init() {
   await loadPokedex();
-  await myPokemonList(pokemons.length) 
+  await myPokemonList(pokemons.length);
   console.log(pokemons);
 }
 
-
-
+async function nPokempnsGet(n) {
+  await getPokemon(n);
+  await savePokedex();
+  await myPokemonList(pokemons.length);
+}
 
 
 

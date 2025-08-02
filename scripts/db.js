@@ -40,6 +40,8 @@ async function reset() {
   pokemons.length = 0;
   await savePokedex();
   await getPokemon(9);
+   await savePokedex();
+  await myPokemonList(9);
   await delay(500); // Warte 1 Sekunde
   document.getElementById("reloadButtonID").style.backgroundColor = "";
 }
