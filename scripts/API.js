@@ -9,6 +9,7 @@ async function getPokemon(n) {
       const Response = await fetch(qLink);
       const data = await Response.json();
       prepairProperties(j, Response, data);
+      j==k?console.log(data):''
     }
   } catch (error) {
     console.log("Fehler: " + error);

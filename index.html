@@ -19,16 +19,17 @@
     <main>
         <div id="mainDivId1">
             <div id="sidbarId">
-                <button id="take100ButtonID" class="sidbarItem" onclick="nPokempnsGet(20)">take next 20
+                <button id="take100ButtonID" class="filterButton sidbarItem" onclick="nPokempnsGet(20)">take next 20
                     Pokemons</button>
                 <p class="find filterButton" onclick="findByName()">find by name</p>
-                <div id=findId class="displayNone">
-                    <input id="findValueId" class='find' type="text" autocomplete="off" onkeydown="find(event.key)"
-                        placeholder="Please enter at least 3 characters to search.">
-                    <button class='find'
+                <div id=findId class="filterButton displayNone">
+                    <input id="findValueId" class='find ' type="text" autocomplete="off" onkeydown="find(event.key)"
+                        placeholder="???">
+                    <button class='find filterButton'
                         onclick="closeFind()">close</button>
                 </div>
                 <p class="all filterButton" onclick="find('')">all together</p>
+                <p class="wild filterButton" onclick="wild()">wild</p>
                 <div id="typesBarId" class=sidbarItem>
 
                     <p class="normal filterButton" onclick="findTyp('normal')">Normal</p>
@@ -51,7 +52,7 @@
                     <p class="fairy filterButton" onclick="findTyp('fairy')">Fairy</p>
 
                 </div>
-                <button id="reloadButtonID" class="sidbarItem" onclick="reset()">Reset</button>
+                <button id="reloadButtonID" class="filterButton sidbarItem" onclick="reset()">Reset</button>
             </div>
 
             <div id="pokedexArea">

@@ -12,6 +12,10 @@ let properties = [
     ],
     typeSlot1: [true, "data.types[0].type.name"],
     typeSlot2: ["data.types.length == 2", "data.types[1].type.name"],
+
+    imageFrontGif:  [
+      true,
+      'data.sprites.other.showdown["front_default"]'],
   },
 ];
 

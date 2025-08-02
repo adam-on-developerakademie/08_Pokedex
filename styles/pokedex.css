@@ -10,7 +10,7 @@
 #pokedex {
   width: 99%;
   display: flex;
-  justify-content: center;
+  justify-content: ceenter;
   justify-content: space-evenly;
   flex-wrap: wrap;
   max-width: 1920px;
@@ -20,8 +20,8 @@
   /*   
   width: var(--pokeCardWidth);
   height: var(--pokeCardHeight); */
-  width: min(126px, 252px);
-  height: min(176px, 352px);
+  width: min(140px, 252px);
+  height: min(190px, 352px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -32,38 +32,32 @@
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
     rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+.cardHeader {
+  font-family: Pokemon;
+  font-weight: bold;
+  padding-top: 5px;
+  height: min(25px, 35px);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+}
 
-  .imageLarge {
-    --height: var(--imageLargeHeight);
-    --width: var(--imageLargeWidth);
-    height: min(25px 50px 100px);
-    width: min(25px 50px 100px);
-  }
-  .cardHeader {
-    font-family: Pokemon;
-    font-weight: bold;
-    padding-top: 5px;
-    height: min(25px, 35px);
-    width: 100%;
-    display: flex;
-    align-items: center;
-    padding-left: 30px;
-  }
-  .cardName {
-    text-shadow: rgba(255, 255, 255, 0.5) -1px -1px 0px,
-      rgb(255, 255, 255, 0.5) 1px -1px 0px, rgb(255, 255, 255, 0.5) -1px 1px 0px,
-      rgb(255, 255, 255, 0.5) 1px 1px 0px;
-    font-weight: bold;
-    height: 30px;
-    width: 100%;
-    display: flex;
-    align-items: baseline;
-    justify-content: center;
-    padding: 0;
-    margin: 0;
-    font-size: min(16px 24px);
-    font-weight: bold;
-  }
+.cardsName {
+  font-size: 20px;
+  font-weight: bold;
+  text-shadow: rgba(255, 255, 255, 0.5) -1px -1px 0px,
+    rgb(255, 255, 255, 0.5) 1px -1px 0px, rgb(255, 255, 255, 0.5) -1px 1px 0px,
+    rgb(255, 255, 255, 0.5) 1px 1px 0px;
+  font-weight: bold;
+  height: 30px;
+  width: 100%;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
 }
 .pokeCard:hover {
   transform: scale(1.03);
@@ -85,6 +79,7 @@
 }
 
 .cardType {
+  font-size: 14px;
   border: 2px solid rgba(255, 255, 255, 0.5);
   border-radius: 7px;
   color: white;
@@ -101,8 +96,8 @@
 }
 
 .imageLarge {
-  height: 80px;
-  width: 80px;
+  height: var(--imageLargeHeight);
+  width: var(--imageLargeWidth);
 }
 
 .normal {
@@ -161,4 +156,7 @@
 }
 .all {
   background-color: #000000;
+}
+.wild {
+  background-image: linear-gradient(red, yellow, green);
 }

@@ -40,9 +40,11 @@ function template(i) {
             <p>Nr.${i + 1}</p>
         </div>
         <img id="imageLargeId${i}" class="imageLarge" src="${
-    pokemons[i].imageLarge
+    pokemons[i].imageFrontGif
   }">
-        <p id="cardNameId${i}">${fLetterUp(pokemons[i].name)}</p>
+        <p id="cardNameId${i}" class="cardsName">${fLetterUp(
+    pokemons[i].name
+  )}</p>
         <div class="cardBottom">
         <p class="cardType ${pokemons[i].typeSlot1}" >${
     pokemons[i].typeSlot1

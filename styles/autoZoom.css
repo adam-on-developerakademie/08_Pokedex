@@ -1,9 +1,8 @@
-:root{
-    --pokeCardHeight: 176px;
-    --pokeCardWidth: 126px;
-    --imageLargeHeight: 100px;
-    --imageLargeWidth: 100px;
-
-
+:root {
+  --pokeCardHeight: 176px;
+  --pokeCardWidth: 126px;
+  --imageLargeHeight: 100px;
+  --imageLargeWidth: 100px;
+  --imageLargeWidth: 80px;
+  --imageLargeHeight: 80px;
 }
-
