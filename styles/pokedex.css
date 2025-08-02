@@ -24,11 +24,11 @@
   height: min(176px, 352px);
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   border: 1px solid black;
   margin: 5px;
   border-radius: 10px;
-
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
     rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
@@ -74,6 +74,7 @@
 }
 
 .cardBottom {
+  padding-top: 5px;
   overflow-wrap: break-word;
   height: 20px;
   width: 100%;
@@ -95,6 +96,8 @@
   padding: 0;
   padding-left: 5px;
   padding-right: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 .imageLarge {

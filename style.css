@@ -89,3 +89,7 @@ footer {
 .displayNone{
   display: none !important;
 }
+
+p{
+  margin: 0;
+}
