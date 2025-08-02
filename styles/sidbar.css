@@ -1,15 +1,44 @@
-#sidbarId{
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    overflow-y: auto;
+#sidbarId {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
 }
 
-#reloadButtonID{
-    height: 100px;
+#reloadButtonID {
+  height: 100px;
 }
 
-.sidbarItem{
-    height: 100%;
+.sidbarItem {
+  font-family: Pokemon;
+  font-weight: 500;
 }
 
+#typesBarId {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.filterButton {
+  width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;;
+  color: white;
+  border-radius: 7px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  text-shadow: rgb(0, 0, 0) -1px -1px 0px, rgb(0, 0, 0) 1px -1px 0px,
+    rgb(0, 0, 0) -1px 1px 0px, rgb(0, 0, 0) 1px 1px 0px;
+}
+.filterButton:hover {
+  cursor: pointer;
+  transform: scale(1.03);
+  transition-duration: 0s;
+  box-shadow: 0px 0px 0px 3px #999;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
