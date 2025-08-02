@@ -98,6 +98,8 @@
 .imageLarge {
   height: var(--imageLargeHeight);
   width: var(--imageLargeWidth);
+  width: auto;
+  height: max 80px;
 }
 
 .normal {
