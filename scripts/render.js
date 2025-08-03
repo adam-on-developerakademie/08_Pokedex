@@ -1,16 +1,21 @@
 async function findTyp(x) {
   let myDiv = document.getElementById("pokeCardId");
+  let j = 0;
   for (i = 0; i < pokemons.length; i++) {
     if (pokemons[i].typeSlot1 == x || pokemons[i].typeSlot2 == x) {
+      j = j + 1;
       document.getElementById("pokeCardId" + i).classList.remove("displayNone");
     } else {
       document.getElementById("pokeCardId" + i).classList.add("displayNone");
     }
   }
+
+  setCardsCenter(j);
 }
 
 async function find(lastChar) {
   let myName = document.getElementById("findValueId").value;
+  let j = 0;
   myName = lastChar.length < 2 ? myName + lastChar : myName.slice(0, -1);
   if (myName.length > -1) {
     for (i = 0; i < pokemons.length; i++) {
@@ -18,11 +23,19 @@ async function find(lastChar) {
         document
           .getElementById("pokeCardId" + i)
           .classList.remove("displayNone");
+        j = j + 1;
       } else {
         document.getElementById("pokeCardId" + i).classList.add("displayNone");
       }
     }
   }
+  setCardsCenter(j);
+}
+async function setCardsCenter(j) {
+  j > 9
+    ? document.getElementById("pokedexArea").classList.remove("center")
+    : document.getElementById("pokedexArea").classList.add("center");
+  console.log(j);
 }
 
 async function myPokemonList(n) {
