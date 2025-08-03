@@ -39,6 +39,8 @@ async function loadPokedex() {
 async function reset() {
   document.getElementById("reloadButtonID").style.backgroundColor = "grey";
   document.getElementById("pokedex").innerHTML = "";
+  localStorage.removeItem("pokemons");
+  localStorage.clear();
   pokemons.length = 0;
   await savePokedex();
   await getPokemon(9);
