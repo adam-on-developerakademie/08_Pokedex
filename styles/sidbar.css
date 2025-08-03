@@ -5,12 +5,13 @@
   overflow-y: auto;
 }
 
-#take100ButtonID{
-    width: 100%;
+#take100ButtonID {
+  width: 100%;
 }
 
 #reloadButtonID {
   height: 100px;
+  background-color: red;
 }
 
 .sidbarItem {
@@ -29,11 +30,12 @@
 .filterButton {
   width: 95%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   margin: 0;
   padding-top: 10px;
-  padding-bottom: 10px;;
+  padding-bottom: 10px;
   color: white;
   border-radius: 7px;
   border: 2px solid rgba(255, 255, 255, 0.5);
@@ -49,20 +51,27 @@
     rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
-.find{
-    background-color: blue;
+.find {
+  background-color: blue;
 }
 
 #findId {
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-#findValueId{
-        background-color: white;
+#findValueId {
+  background-color: white;
   text-align: center;
   width: 90%;
   font-size: 16px;
+}
+
+#resetButtonId{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }

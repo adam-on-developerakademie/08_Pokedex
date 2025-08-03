@@ -9,7 +9,6 @@ async function findTyp(x) {
       document.getElementById("pokeCardId" + i).classList.add("displayNone");
     }
   }
-
   setCardsCenter(j);
 }
 
@@ -38,23 +37,24 @@ async function setCardsCenter(j) {
   console.log(j);
 }
 
-async function myPokemonList(n) {
+async function myPokemonList(n,wild) {
   let myDiv = document.getElementById("pokedex");
   myDiv.innerHTML = "";
   for (i = 0; i < n; i++) {
-    myDiv.innerHTML += template(i);
+    myDiv.innerHTML += template(i,wild);
   }
 }
 
-function template(i) {
+function template(i,wild) {
   x = `
  <div id="pokeCardId${i}" class="pokeCard ${pokemons[i].typeSlot1}Card">
         <div class="cardHeader">   
             <p>Nr.${i + 1}</p>
         </div>
+        <div class="imageBorder">
         <img id="imageLargeId${i}" class="imageLarge" src="${
-    pokemons[i].imageFrontGif
-  }">
+    wild?pokemons[i].imageLarge:pokemons[i].imageFrontGif
+  }"></div>
         <p id="cardNameId${i}" class="cardsName">${fLetterUp(
     pokemons[i].name
   )}</p>

@@ -25,8 +25,7 @@
                 <div id=findId class="filterButton displayNone">
                     <input id="findValueId" class='find ' type="text" autocomplete="off" onkeydown="find(event.key)"
                         placeholder="???">
-                    <button class='find filterButton'
-                        onclick="closeFind()">close</button>
+                    <button class='find filterButton' onclick="closeFind()">close</button>
                 </div>
                 <p class="all filterButton" onclick="find('')">all together</p>
                 <p class="wild filterButton" onclick="wild()">wild</p>
@@ -52,7 +51,10 @@
                     <p class="fairy filterButton" onclick="findTyp('fairy')">Fairy</p>
 
                 </div>
-                <button id="reloadButtonID" class="filterButton sidbarItem" onclick="reset()">Reset</button>
+                <div class="resetButtonId filterButton" onclick="document.getElementById('reloadButtonID').classList.toggle('displayNone')">
+                    RESET?
+                    <button id="reloadButtonID" class="filterButton sidbarItem displayNone" onclick="reset()">Reset</button>
+                </div>
             </div>
 
             <div id="pokedexArea">
