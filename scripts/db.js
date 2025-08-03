@@ -13,9 +13,7 @@ let properties = [
     typeSlot1: [true, "data.types[0].type.name"],
     typeSlot2: ["data.types.length == 2", "data.types[1].type.name"],
 
-    imageFrontGif:  [
-      true,
-      'data.sprites.other.showdown["front_default"]'],
+    imageFrontGif: [true, 'data.sprites.other.showdown["front_default"]'],
   },
 ];
 
@@ -30,11 +28,11 @@ async function loadPokedex() {
         pokemons = JSON.parse(localStorage.getItem("pokemons"));
         myPokemonList(pokemons.length);
       } else {
+        await reset();
       }
     }
   } else {
-    await getPokemon(9);
-    await savePokedex();
+    reset();
   }
 }
 
@@ -44,7 +42,7 @@ async function reset() {
   pokemons.length = 0;
   await savePokedex();
   await getPokemon(9);
-   await savePokedex();
+  await savePokedex();
   await myPokemonList(9);
   await delay(500); // Warte 1 Sekunde
   document.getElementById("reloadButtonID").style.backgroundColor = "";
