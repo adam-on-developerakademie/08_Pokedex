@@ -24,7 +24,7 @@
             <div id="sidbarId">
                 <button id="take100ButtonID" class="filterButton sidbarItem" onclick="nPokempnsGet(20)">take next 20
                     Pokemons</button>
-                <p class="find filterButton" onclick="findByName()">find by name</p>
+                <p class="find filterButton" onclick="findByName(),document.getElementById('findValueId').focus();">find by name</p>
                 <div id=findId class="filterButton displayNone">
                     <input id="findValueId" class='find ' type="text" autocomplete="off" onkeydown="find(event.key)"
                         placeholder="???">
