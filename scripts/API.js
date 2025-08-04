@@ -50,14 +50,3 @@ async function getTypeNomber() {
   numberOfTypes(filter);
 }
 
-function numberOfTypes(array) {
-  const counter = {};
-  for (const element of array) {
-    counter[element] = (counter[element] || 0) + 1;
-  }
-  delete counter.undefined;
-  filterArray = counter;
-  document.getElementById("typesBarId").innerHTML = filterButtons();
-  let n=Object.values(filterArray).reduce((accumulator, currentValue) => accumulator + currentValue, 0);
-   document.getElementById("take100ButtonID").innerHTML =`you have ${pokemons.length} take next 20`
-}

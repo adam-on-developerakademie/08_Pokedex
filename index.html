@@ -24,11 +24,14 @@
     <main>
         <div id="mainDivId1">
             <div id="sidbarId">
-                <button id="take100ButtonID" class="filterButton" onclick="nPokempnsGet(20)">take next 20
-                    Pokemons</button>
-                <div id="pagesSelectorId"><button class="pageButton" onclick="backPage()">back</button>
-                    <div id="pagesId"></div><button class="pageButton" onclick="nextPage()">next</button>
+                <p id="take100ButtonID"  class="green filterButton" onclick="nPokempnsGet(20)">take next 20</p>
+                <p id="pagesId" class="green filterButton"></p>
+                <div id="pagesSelectorId">
+                    <p class="pageButton" onclick="backPage()">back</p>
+                         
+                    <p class="pageButton" onclick="nextPage()">next</p>
                 </div>
+                
                 <p class="find filterButton" onclick="findByName(),document.getElementById('findValueId').focus();">find
                     by name</p>
                 <div id=findId class="filterButton displayNone">
@@ -38,7 +41,7 @@
                 </div>
                 <p class="all filterButton" onclick="allTogether()">all together</p>
                 <p class="wild filterButton" onclick="wildFunction()">wild</p>
-                <div id="typesBarId" class=sidbarItem>
+                <div id="typesBarId" class="sidbarItem">
 
                     <p class="normal filterButton" onclick="findTyp('normal')">Normal</p>
                     <p class="fire filterButton" onclick="findTyp('fire')">Fire</p>

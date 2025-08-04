@@ -3,12 +3,7 @@
   display: flex;
   flex-direction: column;
   overflow-y: auto;
-}
-
-#take100ButtonID {
-    width: 96%;
-  background-color: rgb(2, 102, 0);
-  font-size: 20px;
+  width: 150px;
 }
 
 #reloadButtonID {
@@ -32,8 +27,9 @@
 }
 
 .filterButton {
-  width: 95%;
+  width: 90%;
   display: flex;
+  white-space: nowrap;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -54,9 +50,6 @@
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
     rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
-.findCoverID{
-  
-}
 
 .find {
   background-color: blue;
@@ -76,19 +69,14 @@
   font-size: 16px;
 }
 
-#pagesSelectorId{
-  width: 96%;
+#pagesId {
   height: 40px;
+  width: 90%;
   display: flex;
-}
-#pagesId{
-  width: 100%;
-  display: flex;
-  flex-direction: column;
+  white-space: nowrap;
   align-items: center;
   justify-content: center;
-  margin: 0;
-  font-size: 20px;
+  font-size: 14px;
   color: white;
   background-color: green;
   border-radius: 7px;
@@ -96,12 +84,20 @@
   text-shadow: rgb(0, 0, 0) -1px -1px 0px, rgb(0, 0, 0) 1px -1px 0px,
     rgb(0, 0, 0) -1px 1px 0px, rgb(0, 0, 0) 1px 1px 0px;
 }
-.pageButton{
-    display: flex;
+
+#pagesSelectorId {
+  width: 93%;
+  display: flex;
+}
+.pageButton {
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin: 0;
+  height: 36px;
+  width: 100%;
+  padding: auto;
   color: white;
   background-color: green;
   border-radius: 7px;
@@ -116,4 +112,12 @@
   box-shadow: 0px 0px 0px 3px #999;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
     rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.seidControl {
+  width: 100px;
+  background-color: green;
+  display: flex;
+}
+.green {
+  background-color: green;
 }
