@@ -28,7 +28,7 @@
   justify-content: center;
   align-items: center;
   border: 1px solid black;
- 
+
   border-radius: 10px;
 }
 .cardHeader {
@@ -77,6 +77,7 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  gap: 5px;
 }
 
 .cardType {
@@ -92,8 +93,6 @@
   padding: 0;
   padding-left: 5px;
   padding-right: 5px;
-  margin-left: 5px;
-  margin-right: 5px;
 }
 
 .imageBorder {

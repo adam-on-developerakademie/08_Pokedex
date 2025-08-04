@@ -5,7 +5,7 @@ function filterButtons() {return `
                     <p class="water filterButton" onclick="findTyp('water')">${filterArray.water?filterArray.water:''} Water</p>
                     <p class="flying filterButton" onclick="findTyp('flying')">${filterArray.flying?filterArray.flying:''} Flying</p>
                     <p class="grass filterButton" onclick="findTyp('grass')">${filterArray.grass?filterArray.grass:''} Grass</p>
-                    <p class="poison filterButton" onclick="findTyp('poison')">${filterArray.poiso?filterArray.poison:''} Poison</p>
+                    <p class="poison filterButton" onclick="findTyp('poison')">${filterArray.poison?filterArray.poison:''} Poison</p>
                     <p class="electric filterButton" onclick="findTyp('electric')">${filterArray.electric?filterArray.electric:''} Electric</p>
                     <p class="ground filterButton" onclick="findTyp('ground')">${filterArray.ground?filterArray.ground:''} Ground</p>
                     <p class="psychic filterButton" onclick="findTyp('psychic')">${filterArray.psychic?filterArray.psychic:''} Psychic</p>
