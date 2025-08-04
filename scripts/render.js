@@ -10,7 +10,7 @@ async function myPokemonList() {
   renderPagesbuttons();
 }
 
-function template(i, wild) {
+function template(i) {
   x = `
  <div id="pokeCardId${i}" class="pokeCard ${pokemons[i].typeSlot1}Card">
         <div class="cardHeader">   
@@ -37,5 +37,38 @@ function template(i, wild) {
 }
 
 function renderPagesbuttons() {
-  document.getElementById("pagesId").innerHTML = `${page+1} / ${fullSides}`;
+  document.getElementById("pagesId").innerHTML = `${page + 1} / ${fullSides}`;
+}
+
+function allTogether() {
+  page = 0;
+  myPokemonList();
+}
+
+async function myPokemonTypeList(x) {
+  let myDiv = document.getElementById("pokedex");
+  myDiv.innerHTML = "";
+  for (i = 0; i < pokemons.length; i++) {
+    if (pokemons[i].typeSlot1 == x || pokemons[i].typeSlot2 == x) {
+      myDiv.innerHTML += template(i);
+    }
+  }
+}
+
+async function search(lastChar) {
+  let myDiv = document.getElementById("pokedex");
+
+  let myName = document.getElementById("findValueId").value;
+  let j = 0;
+  myName = lastChar.length < 2 ? myName + lastChar : myName.slice(0, -1);
+  if (myName.length > 2) {
+    myDiv.innerHTML = "";
+    for (i = 0; i < pokemons.length; i++) {
+      if (pokemons[i].name.match(myName.toLowerCase())) {
+        myDiv.innerHTML += template(i)
+      }
+    }
+  } else {
+    myPokemonList();
+  }
 }

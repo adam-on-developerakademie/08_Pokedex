@@ -15,9 +15,8 @@ function closeFind() {
 function wildFunction() {
   document.getElementById("");
   let autoZoom = document.querySelector(":root");
-  let x = document.getElementById("imageLargeId"+page*qOnPage).offsetHeight;
   wild=!wild
-  if (x == 80) {
+  if (wild) {
     autoZoom.style.setProperty("--imageLargeWidth", "100vh");
     autoZoom.style.setProperty("--imageLargeHeight", "100vh");
     myPokemonList();
@@ -47,31 +46,6 @@ async function findTyp(x) {
     }
   }
   setCardsCounter(j);
-}
-
-async function search(lastChar) {
-  let myName = document.getElementById("findValueId").value;
-  let j = 0;
-  myName = lastChar.length < 2 ? myName + lastChar : myName.slice(0, -1);
-  if (myName.length > 2) {
-    j = findValue(j, myName);
-  } else {
-    j = searchValue(j);
-  }
-  setCardsCounter(j);
-  console.log(j);
-}
-
-function searchValue(j) {
-  for (i = 0; i < pokemons.length; i++) {
-    i >= page * qOnPage && i < page * qOnPage + qOnPage
-      ? document
-          .getElementById("pokeCardId" + i)
-          .classList.remove("displayNone")
-      : "";
-    j = j + 1;
-  }
-  return j;
 }
 
 async function find(lastChar) {
@@ -110,13 +84,11 @@ async function setCardsCounter(j) {
 
 function nextPage() {
   (page + 1) > fullSides -1? page = 0 : page++;
-     console.log(page);
   renderPagesbuttons();
     myPokemonList()
 }
 function backPage() {
    page <=0 ? page = fullSides -1 : page--;
-     console.log(page);
   renderPagesbuttons();
     myPokemonList()
 }
