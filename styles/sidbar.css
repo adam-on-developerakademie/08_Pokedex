@@ -12,7 +12,8 @@
 }
 
 #reloadButtonID {
-  height: 100px;
+  height: auto;
+  width: auto;
   background-color: red;
 }
 
@@ -24,7 +25,8 @@
 
 #typesBarId {
   display: flex;
-  height: 50%;
+  width: 98%;
+  height: 65%;
   flex-direction: column;
   overflow-y: auto;
 }
@@ -74,12 +76,6 @@
   font-size: 16px;
 }
 
-#resetButtonId{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
 #pagesSelectorId{
   width: 96%;
   height: 40px;

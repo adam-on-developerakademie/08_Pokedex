@@ -42,6 +42,13 @@ async function loadPokedex() {
   }
 }
 
+function resetAsk() {
+
+  document.getElementById('reloadButtonID').classList.toggle('displayNone'), getTypeNomber();
+  document.getElementById('reloadAskButtonID').classList.toggle('displayNone'), getTypeNomber();
+  
+}
+
 async function reset() {
   document.getElementById("reloadButtonID").style.backgroundColor = "grey";
   document.getElementById("pokedex").innerHTML = "";

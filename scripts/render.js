@@ -2,7 +2,7 @@ async function myPokemonList() {
   let myDiv = document.getElementById("pokedex");
   myDiv.innerHTML = "";
   for (i = 0; i < pokemons.length; i++) {
-    fullSides = (i / qOnPage).toFixed(0);
+    fullSides = Math.ceil(i / qOnPage);
     if (i >= page * qOnPage && i < page * qOnPage + qOnPage) {
       myDiv.innerHTML += template(i, wild);
     }
