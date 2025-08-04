@@ -1,6 +1,8 @@
 let pokemons = [];
 let filter = [];
 let filterArray;
+let fullSide =0
+let seid=0
 
 let properties = [
   {
@@ -28,7 +30,7 @@ async function loadPokedex() {
     if (typeof localStorage != "undefined") {
       if (localStorage.getItem("pokemons") != null) {
         pokemons = JSON.parse(localStorage.getItem("pokemons"));
-        myPokemonList(pokemons.length);
+        myPokemonList(pokemons.length,false);
       } else {
         await reset();
       }
@@ -45,10 +47,9 @@ async function reset() {
   localStorage.clear();
   pokemons.length = 0;
   await savePokedex();
-  await getPokemon(9);
+  await getPokemon(50);
   await savePokedex();
-  await myPokemonList(9);
-  await delay(500); // Warte 1 Sekunde
+  await myPokemonList(50,false);
   await getTypeNomber();
   document.getElementById("reloadButtonID").style.backgroundColor = "";
 }
