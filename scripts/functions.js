@@ -16,6 +16,7 @@ function wildFunction() {
   document.getElementById("");
   let autoZoom = document.querySelector(":root");
   let x = document.getElementById("imageLargeId"+page*qOnPage).offsetHeight;
+  wild=!wild
   if (x == 80) {
     autoZoom.style.setProperty("--imageLargeWidth", "100vh");
     autoZoom.style.setProperty("--imageLargeHeight", "100vh");
