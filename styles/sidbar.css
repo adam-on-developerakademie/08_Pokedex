@@ -4,6 +4,7 @@
   flex-direction: column;
   overflow-y: auto;
   width: 150px;
+  background-color: rgba(99, 99, 99, 0.3);
 }
 
 #reloadButtonID {
@@ -21,13 +22,14 @@
 #typesBarId {
   display: flex;
   width: 98%;
-  height: 65%;
+  height: 500px;
   flex-direction: column;
   overflow-y: auto;
+  background-color: rgba(99, 99, 99, 0.3);
 }
 
 .filterButton {
-  width: 90%;
+  width: 94%;
   display: flex;
   white-space: nowrap;
   flex-direction: column;
@@ -65,18 +67,19 @@
 #findValueId {
   background-color: white;
   text-align: center;
-  width: 90%;
+  width: 94%;
   font-size: 16px;
 }
 
 #pagesId {
   height: 40px;
-  width: 90%;
+  width: 94%;
   display: flex;
   white-space: nowrap;
   align-items: center;
   justify-content: center;
   font-size: 14px;
+  padding: 0;
   color: white;
   background-color: green;
   border-radius: 7px;
@@ -86,7 +89,7 @@
 }
 
 #pagesSelectorId {
-  width: 93%;
+  width: 96%;
   display: flex;
 }
 .pageButton {
@@ -96,7 +99,7 @@
   justify-content: center;
   margin: 0;
   height: 36px;
-  width: 100%;
+  width: 94%;
   padding: auto;
   color: white;
   background-color: green;
@@ -120,4 +123,7 @@
 }
 .green {
   background-color: green;
+}
+.white {
+  background-color: white;
 }

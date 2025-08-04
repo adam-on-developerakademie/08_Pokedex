@@ -5,6 +5,7 @@
   flex-direction: column;
   background-color: transparent;
   overflow-y: auto;
+  background-color: rgba(99, 99, 99, 0.3);
 }
 
 #pokedex {
