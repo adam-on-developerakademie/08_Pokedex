@@ -1,8 +1,10 @@
 let pokemons = [];
 let filter = [];
 let filterArray;
-let fullSide =0
-let seid=0
+let fullSides =0
+let page=0
+let wild=false
+let qOnPage=50
 
 let properties = [
   {

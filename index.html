@@ -16,22 +16,28 @@
 
     <header>
         <div id="headerTextid">
-            <p class="headerText"><H1>Adam's Pokedex</H1></p>
+            <p class="headerText">
+            <H1>Adam's Pokedex</H1>
+            </p>
         </div>
     </header>
     <main>
         <div id="mainDivId1">
             <div id="sidbarId">
-                <button id="take100ButtonID" class="filterButton sidbarItem" onclick="nPokempnsGet(20)">take next 20
+                <button id="take100ButtonID" class="filterButton" onclick="nPokempnsGet(20)">take next 20
                     Pokemons</button>
-                <p class="find filterButton" onclick="findByName(),document.getElementById('findValueId').focus();">find by name</p>
+                <div id="pagesSelectorId"><button class="pageButton" onclick="backPage()">back</button>
+                    <div id="pagesId"></div><button class="pageButton" onclick="nextPage()">next</button>
+                </div>
+                <p class="find filterButton" onclick="findByName(),document.getElementById('findValueId').focus();">find
+                    by name</p>
                 <div id=findId class="filterButton displayNone">
                     <input id="findValueId" class='find ' type="text" autocomplete="off" onkeydown="search(event.key)"
                         placeholder="???">
                     <button class='find filterButton' onclick="closeFind()">close</button>
                 </div>
                 <p class="all filterButton" onclick="find('')">all together</p>
-                <p class="wild filterButton" onclick="wild()">wild</p>
+                <p class="wild filterButton" onclick="wildFunction()">wild</p>
                 <div id="typesBarId" class=sidbarItem>
 
                     <p class="normal filterButton" onclick="findTyp('normal')">Normal</p>

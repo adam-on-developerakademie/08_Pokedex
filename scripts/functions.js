@@ -11,19 +11,20 @@ function closeFind() {
   document.getElementById("findValueId").value = "";
   document.getElementById("findId").classList.toggle("displayNone");
 }
-function wild() {
+
+function wildFunction() {
   document.getElementById("");
   let autoZoom = document.querySelector(":root");
-  let x = document.getElementById("imageLargeId0").offsetHeight;
+  let x = document.getElementById("imageLargeId"+page*qOnPage).offsetHeight;
   if (x == 80) {
     autoZoom.style.setProperty("--imageLargeWidth", "100vh");
     autoZoom.style.setProperty("--imageLargeHeight", "100vh");
-    myPokemonList(pokemons.length, true);
+    myPokemonList();
   } else {
     document.getElementById("pokedexArea").style.justifyContent = "";
     autoZoom.style.setProperty("--imageLargeWidth", "80px");
     autoZoom.style.setProperty("--imageLargeHeight", "80px");
-    myPokemonList(pokemons.length, false);
+    myPokemonList();
   }
 }
 
@@ -31,11 +32,17 @@ async function findTyp(x) {
   let myDiv = document.getElementById("pokeCardId");
   let j = 0;
   for (i = 0; i < pokemons.length; i++) {
-    if ((pokemons[i].typeSlot1 == x || pokemons[i].typeSlot2 == x) && i >= seid * 50 && i < seid * 50 + 50) {
+    if (
+      (pokemons[i].typeSlot1 == x || pokemons[i].typeSlot2 == x) &&
+      i >= page * qOnPage &&
+      i < page * qOnPage + qOnPage
+    ) {
       j = j + 1;
       document.getElementById("pokeCardId" + i).classList.remove("displayNone");
-    } else {(i >= seid * 50 && i < seid * 50 + 50)?
-      document.getElementById("pokeCardId" + i).classList.add("displayNone"):'';
+    } else {
+      i >= page * qOnPage && i < page * qOnPage + qOnPage
+        ? document.getElementById("pokeCardId" + i).classList.add("displayNone")
+        : "";
     }
   }
   setCardsCounter(j);
@@ -56,7 +63,11 @@ async function search(lastChar) {
 
 function searchValue(j) {
   for (i = 0; i < pokemons.length; i++) {
-    (i >= seid * 50 && i < seid * 50 + 50)?document.getElementById("pokeCardId" + i).classList.remove("displayNone"):'';
+    i >= page * qOnPage && i < page * qOnPage + qOnPage
+      ? document
+          .getElementById("pokeCardId" + i)
+          .classList.remove("displayNone")
+      : "";
     j = j + 1;
   }
   return j;
@@ -67,7 +78,7 @@ async function find(lastChar) {
   let j = 0;
   myName = lastChar.length < 2 ? myName + lastChar : myName.slice(0, -1);
   if (myName.length > -1) {
-    j=findValue(j, myName);
+    j = findValue(j, myName);
   }
   setCardsCounter(j);
 }
@@ -75,10 +86,16 @@ async function find(lastChar) {
 function findValue(j, myName) {
   for (i = 0; i < pokemons.length; i++) {
     if (pokemons[i].name.match(myName.toLowerCase())) {
-      (i >= seid * 50 && i < seid * 50 + 50)?document.getElementById("pokeCardId" + i).classList.remove("displayNone"):'';
+      i >= page * qOnPage && i < page * qOnPage + qOnPage
+        ? document
+            .getElementById("pokeCardId" + i)
+            .classList.remove("displayNone")
+        : "";
       j = j + 1;
-    } else {(i >= seid * 50 && i < seid * 50 + 50)?
-      document.getElementById("pokeCardId" + i).classList.add("displayNone"):'';
+    } else {
+      i >= page * qOnPage && i < page * qOnPage + qOnPage
+        ? document.getElementById("pokeCardId" + i).classList.add("displayNone")
+        : "";
     }
   }
   return j;
@@ -88,4 +105,17 @@ async function setCardsCounter(j) {
   j > 9
     ? document.getElementById("pokedexArea").classList.remove("center")
     : document.getElementById("pokedexArea").classList.add("center");
+}
+
+function nextPage() {
+  (page + 1) > fullSides -1? page = 0 : page++;
+     console.log(page);
+  renderPagesbuttons();
+    myPokemonList()
+}
+function backPage() {
+   page <=0 ? page = fullSides -1 : page--;
+     console.log(page);
+  renderPagesbuttons();
+    myPokemonList()
 }

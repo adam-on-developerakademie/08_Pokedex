@@ -1,12 +1,13 @@
-async function myPokemonList(n, wild) {
+async function myPokemonList() {
   let myDiv = document.getElementById("pokedex");
   myDiv.innerHTML = "";
-  for (i = 0; i < n; i++) {
-    fullSide = (i % 50).toFixed(0);
-    if (i >= seid * 50 && i < seid * 50 + 50) {
+  for (i = 0; i < pokemons.length; i++) {
+    fullSides = (i / qOnPage).toFixed(0);
+    if (i >= page * qOnPage && i < page * qOnPage + qOnPage) {
       myDiv.innerHTML += template(i, wild);
     }
   }
+  renderPagesbuttons();
 }
 
 function template(i, wild) {
@@ -33,4 +34,8 @@ function template(i, wild) {
  </div> 
  `;
   return x;
+}
+
+function renderPagesbuttons() {
+  document.getElementById("pagesId").innerHTML = `${page+1} / ${fullSides}`;
 }
