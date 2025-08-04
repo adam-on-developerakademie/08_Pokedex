@@ -15,6 +15,9 @@
 <body onload="init()">
 
     <header>
+        <div id="headerTextid">
+            <p class="headerText"><H1>Adam's Pokedex</H1></p>
+        </div>
     </header>
     <main>
         <div id="mainDivId1">
@@ -51,9 +54,11 @@
                     <p class="fairy filterButton" onclick="findTyp('fairy')">Fairy</p>
 
                 </div>
-                <div class="resetButtonId filterButton" onclick="document.getElementById('reloadButtonID').classList.toggle('displayNone'), getTypeNomber();">
+                <div class="resetButtonId filterButton"
+                    onclick="document.getElementById('reloadButtonID').classList.toggle('displayNone'), getTypeNomber();">
                     RESET?
-                    <button id="reloadButtonID" class="filterButton sidbarItem displayNone" onclick="reset()">Reset</button>
+                    <button id="reloadButtonID" class="filterButton sidbarItem displayNone"
+                        onclick="reset()">Reset</button>
                 </div>
             </div>
 
@@ -66,6 +71,9 @@
     </main>
 
     <footer>
+        <div id="footerTextid">
+            <p class="footerText">© design by Adam</p>
+        </div>
     </footer>
 
 </body>
