@@ -1,5 +1,6 @@
 let pokemons = [];
 let filter = [];
+let filterArray;
 
 let properties = [
   {
@@ -48,6 +49,6 @@ async function reset() {
   await savePokedex();
   await myPokemonList(9);
   await delay(500); // Warte 1 Sekunde
+  await getTypeNomber();
   document.getElementById("reloadButtonID").style.backgroundColor = "";
-  document.getElementById("reloadButtonID").classList.toggle("displayNone");
 }

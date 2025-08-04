@@ -51,7 +51,7 @@
                     <p class="fairy filterButton" onclick="findTyp('fairy')">Fairy</p>
 
                 </div>
-                <div class="resetButtonId filterButton" onclick="document.getElementById('reloadButtonID').classList.toggle('displayNone')">
+                <div class="resetButtonId filterButton" onclick="document.getElementById('reloadButtonID').classList.toggle('displayNone'), getTypeNomber();">
                     RESET?
                     <button id="reloadButtonID" class="filterButton sidbarItem displayNone" onclick="reset()">Reset</button>
                 </div>
@@ -75,5 +75,6 @@
 <script src="./scripts/render.js"></script>
 <script src="./scripts/functions.js"></script>
 <script src="./scripts/autoZoom.js"></script>
+<script src="./scripts/templates.js"></script>
 
 </html>

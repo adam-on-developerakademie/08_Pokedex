@@ -9,7 +9,7 @@ async function getPokemon(n) {
       const Response = await fetch(qLink);
       const data = await Response.json();
       prepairProperties(j, Response, data);
-      j==k?console.log(data):''
+      //j == k ? console.log(data) : "";
     }
   } catch (error) {
     console.log("Fehler: " + error);
@@ -35,4 +35,29 @@ async function getPokemonValue(j, i, data, Response) {
     eval(propertie);
     let wenn = eval(propertieObligatory);
   }
+}
+
+async function getTypeNomber() {
+  let typCounter = 0;
+  let typName = "";
+  filter.length = 0;
+  for (i = 0; i < pokemons.length; i++) {
+    typName = pokemons[i].typeSlot1;
+    filter.push(typName);
+    typName = pokemons[i].typeSlot2;
+    filter.push(typName);
+  }
+  numberOfTypes(filter);
+}
+
+function numberOfTypes(array) {
+  const counter = {};
+  for (const element of array) {
+    counter[element] = (counter[element] || 0) + 1;
+  }
+  delete counter.undefined;
+  filterArray = counter;
+  document.getElementById("typesBarId").innerHTML = filterButtons();
+  let n=Object.values(filterArray).reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+   document.getElementById("take100ButtonID").innerHTML =`you have ${pokemons.length} take next 20`
 }

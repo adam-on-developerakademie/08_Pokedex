@@ -1,15 +1,34 @@
+/* let autoZoom = document.querySelector(":root");
+
+
+window.addEventListener("resize", () => {
+  let dynWhidth= getComputedStyle(pokedex).gap || getComputedStyle(pokedex).rowGap;
+  
+  //document.getElementById('pokedex').style.gap
+
+  console.log(dynWhidth)
+  //pokeCardSizing(sMod);
+  //imageLargeSizing(sMod);
+
+});
+
+ */
+
 /* 
-let autoZoom = document.querySelector(":root");
-let startWidth = window.innerWidth;
-let CW = 1;
-let sMod;
 
 window.addEventListener("resize", () => {
   let sMod = window.innerWidth / startWidth;
   startWidth = window.innerWidth;
-  pokeCardSizing(sMod);
-  imageLargeSizing(sMod);
+  console.log(sMod)
+  //pokeCardSizing(sMod);
+  //imageLargeSizing(sMod);
+
 });
+
+
+let startWidth = window.innerWidth;
+let CW = 1;
+let sMod;
 
 function pokeCardSizing(sMod) {
   let ratio =60/90//=63/88;
@@ -27,4 +46,5 @@ function imageLargeSizing(sMod) {
   autoZoom.style.setProperty("--imageLargeHeight", (y + y * sMod) / 2 + "px");
   console.log(sMod + "  &  " + x + "  &  " + y);
 }
+
  */

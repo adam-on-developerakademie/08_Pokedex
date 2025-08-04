@@ -9,7 +9,7 @@ async function findTyp(x) {
       document.getElementById("pokeCardId" + i).classList.add("displayNone");
     }
   }
-  setCardsCenter(j);
+  setCardsCounter(j);
 }
 
 async function find(lastChar) {
@@ -28,13 +28,13 @@ async function find(lastChar) {
       }
     }
   }
-  setCardsCenter(j);
+  setCardsCounter(j);
 }
-async function setCardsCenter(j) {
+
+async function setCardsCounter(j) {
   j > 9
     ? document.getElementById("pokedexArea").classList.remove("center")
     : document.getElementById("pokedexArea").classList.add("center");
-  console.log(j);
 }
 
 async function myPokemonList(n,wild) {
