@@ -2,6 +2,7 @@ async function init() {
   await loadPokedex();
   await getTypeNomber();
   await myPokemonList();
+  //await overlayLoad()
 
   //console.log(pokemons);
 }

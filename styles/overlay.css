@@ -1,0 +1,57 @@
+#overlayId {
+  height: 600px;
+  width: 450px;
+
+  border: 2px solid black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+   background-color: white;
+}
+
+#overlayImageBorderId {
+  height: 250px;
+  width: 300px;
+  border: 2px solid black;
+  margin-top: 50px;
+
+  #overlayImageId {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+}
+
+#tabsId{
+display: flex;
+margin-top: 30px;
+}
+
+#attributesID{
+  height: 20px;
+  width: 50px;
+
+  background-color: darkorange;
+}
+#attksID{
+      height: 20px;
+  width: 50px;
+
+  background-color: whitesmoke;
+}
+#evolutiosID{
+      height: 20px;
+  width: 50px;
+
+  background-color: aqua;
+}
+#tabMainId{
+      height: 200px;
+  width: 300px;
+
+  background-color: whitesmoke;
+}

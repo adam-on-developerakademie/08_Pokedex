@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./styles/autoZoom.css">
     <link rel="stylesheet" href="./styles/pokedex.css">
     <link rel="stylesheet" href="./styles/sidbar.css">
+    <link rel="stylesheet" href="./styles/overlay.css">
 </head>
 
 <body onload="init()">
@@ -24,14 +25,14 @@
     <main>
         <div id="mainDivId1">
             <div id="sidbarId">
-                <p id="take100ButtonID"  class="green filterButton" onclick="nPokempnsGet(20)">take next 20</p>
+                <p id="take100ButtonID" class="green filterButton" onclick="nPokempnsGet(20)">take next 20</p>
                 <p id="pagesId" class="green filterButton"></p>
                 <div id="pagesSelectorId">
                     <p class="pageButton" onclick="backPage()">back</p>
-                         
+
                     <p class="pageButton" onclick="nextPage()">next</p>
                 </div>
-                
+
                 <p class="find filterButton" onclick="findByName(),document.getElementById('findValueId').focus();">find
                     by name</p>
                 <div id=findId class="filterButton displayNone">
@@ -63,9 +64,8 @@
                     <p class="fairy filterButton" onclick="findTyp('fairy')">Fairy</p>
 
                 </div>
-                <div class="white filterButton"
-                    onclick=" resetAsk()">
-                    <div id="reloadAskButtonID" >RESET?</div>
+                <div class="white filterButton" onclick=" resetAsk()">
+                    <div id="reloadAskButtonID">RESET?</div>
                     <button id="reloadButtonID" class="filterButton sidbarItem displayNone"
                         onclick="reset()">Reset</button>
                 </div>
@@ -73,6 +73,8 @@
 
             <div id="pokedexArea">
                 <div id="pokedex"></div>
+                <div id="overlayId" class="grassCard">
+                </div>
             </div>
 
         </div>
@@ -91,7 +93,7 @@
 <script src="./script.js"></script>
 <script src="./scripts/render.js"></script>
 <script src="./scripts/functions.js"></script>
-<script src="./scripts/autoZoom.js"></script>
 <script src="./scripts/templates.js"></script>
+<script src="./scripts/overlay.js"></script>
 
 </html>
