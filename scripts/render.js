@@ -12,7 +12,7 @@ async function myPokemonList() {
 
 function template(i) {
   x = `
- <div id="pokeCardId${i}" class="pokeCard ${pokemons[i].typeSlot1}Card" onclick="${overlayLoad(i)}">
+ <div id="pokeCardId${i}" class="pokeCard ${pokemons[i].typeSlot1}Card" onclick="overlayLoad(${i})">
         <div class="cardHeader">   
             <p>Nr.${i + 1}</p>
         </div>
