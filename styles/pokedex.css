@@ -44,12 +44,12 @@
 }
 
 .cardsName {
+  font-family: Pokemon-Bold;
   font-size: 16px;
-  font-weight: bold;
+  font-weight: bolder;
   text-shadow: rgba(255, 255, 255, 0.5) -1px -1px 0px,
     rgb(255, 255, 255, 0.5) 1px -1px 0px, rgb(255, 255, 255, 0.5) -1px 1px 0px,
     rgb(255, 255, 255, 0.5) 1px 1px 0px;
-  font-weight: bold;
   height: 20px;
   width: 100%;
   display: flex;

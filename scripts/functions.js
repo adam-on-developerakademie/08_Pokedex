@@ -92,3 +92,8 @@ function backPage() {
   renderPagesbuttons();
     myPokemonList()
 }
+
+function myToggle(id){
+  let x='document.getElementById("'+id+'").classList.toggle("displayNone")'
+  eval(x)
+}

@@ -25,14 +25,14 @@ function main(i){
             let value=`
             <div id=attributesMainId>
             <table>
-            <tr class="column1"><th>Base experience</th><th class="column2">${pokemons[i].base_experience}</th></tr>
-            <tr class="column1"><th>Height</th><th class="column2">${pokemons[i].height}</th></tr>
-            <tr class="column1"><th>Weight</th><th class="column2">${pokemons[i].weight}</th></tr>
-            <tr class="column1"><th>Abilities:</th><th class="column2">${pokemons[i].ability1 ? (pokemons[i].ability1 + (pokemons[i].ability1_hiden ? '*':'')): ""}  </th></tr>      
-            <tr class="column1"><th></th><th class="column2">${pokemons[i].ability2 ? (pokemons[i].ability2 + (pokemons[i].ability2_hiden ? '*':'')): ""}  </th></tr>      
-            <tr class="column1"><th></th><th class="column2">${pokemons[i].ability3 ? (pokemons[i].ability3 + (pokemons[i].ability3_hiden ? '*':'')): ""}  </th></tr>      
+            <tr><td>Base experience</td><td>${pokemons[i].base_experience}</td></tr>
+            <tr><td>Height</td><td>${pokemons[i].height}</td></tr>
+            <tr><td>Weight</td><td>${pokemons[i].weight}</td></tr>
+            <tr><td>Abilities</td><td>${pokemons[i].ability1 ? '1. '+ (pokemons[i].ability1 + (pokemons[i].ability1_hiden ? ' *':'')): ""}  </td></tr>      
+            <tr><td></td><td>${pokemons[i].ability2 ? '2. '+ (pokemons[i].ability2 + (pokemons[i].ability2_hiden ? ' *':'')): ""}  </td></tr>      
+            <tr><td></td><td>${pokemons[i].ability3 ? '3. '+ (pokemons[i].ability3 + (pokemons[i].ability3_hiden ? ' *':'')): ""}  </td></tr>      
             </table>
-            * Ability is hidden.
+            ${pokemons[i].ability1_hiden || pokemons[i].ability2_hiden || pokemons[i].ability3_hiden ? '* Ability is hidden.':''}
             </div>`
   return value
 }

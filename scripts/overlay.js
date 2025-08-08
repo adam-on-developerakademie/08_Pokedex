@@ -1,39 +1,42 @@
 function overlayLoad(i) {
   let overlay = document.getElementById("overlayId");
-  overlay.classList.toggle("displayNone");
+  overlay.classList.remove("displayNone");
   console.log(pokemons[i]);
   overlay.innerHTML = `
+            <div id="overlayCloseId"><img src="./assets/icons/close.png" onclick="myToggle('overlayId')"></div>
             <div id="overlayImageBorderId" class="${pokemons[i].typeSlot1}Card" onclick="overlayLoad(${i})">
                 <img id="overlayImageId" src="${pokemons[i].imageLarge}" alt="Overlay Image">
-            </div >
-            <div id="tabsId">
-            <div id="attributesID" onclick="attributesMain(${i})">attributes
             </div>
-            <div id="statsID" onclick="statsMain(${i})">stats
-            </div>
-            <div id="evolutionsID" onclick="evolutionsMain(${i})">evolutions
+            <div id="overlayNaneId">
+              <img src="./assets/icons/arrow_backward.png" onclick="previousPokemon (${i})">
+                <p>#${('0000'+(i + 1)).slice((''+i).length) + '  ' +fLetterUp(pokemons[i].name)}</p>
+              <img src="./assets/icons/arrow_forward.png" onclick="nextPokemon (${i})">
             </div>
             </div>
-            <div id="tabMainId">
+            <div id="tabMainNavId">
+              <img src="./assets/icons/arrow_backward.png" onclick="previousPokemon (${i})">
+              <div id="tabMainId"></div>
+              <img src="./assets/icons/arrow_forward.png" onclick="nextPokemon (${i})">
             </div>
 `;
   attributesMain(i);
 }
 
 function attributesMain(i) {
-  document.getElementById("tabMainId").classList.remove("evolutionsCollor", "statsCollor");
-  document.getElementById("tabMainId").classList.add("attributesCollor");
   document.getElementById("tabMainId").innerHTML = main(i);
 }
 
 function statsMain(i) {
-  document.getElementById("tabMainId").classList.remove("evolutionsCollor", "attributesCollor");
-  document.getElementById("tabMainId").classList.add("statsCollor");
   document.getElementById("tabMainId").innerHTML = main(i);
 }
 
 function evolutionsMain(i) {
-  document.getElementById("tabMainId").classList.remove("attributesCollor", "statsCollor");
-  document.getElementById("tabMainId").classList.add("evolutionsCollor");
   document.getElementById("tabMainId").innerHTML = main(i);
+}
+
+function previousPokemon (i){
+  i==0? overlayLoad(pokemons.length-1):overlayLoad(i-1)  
+}
+function nextPokemon (i){
+  i==pokemons.length-1 ? overlayLoad(0):overlayLoad(i+1)  
 }
