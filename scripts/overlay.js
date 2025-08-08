@@ -3,35 +3,37 @@ function overlayLoad(i) {
   overlay.classList.toggle("displayNone");
   console.log(pokemons[i]);
   overlay.innerHTML = `
-            <div id="overlayImageBorderId" class="${
-              pokemons[i].typeSlot1
-            }Card" onclick="overlayLoad(${i})">
-                <img id="overlayImageId" src="${
-                  pokemons[i].imageLarge
-                }" alt="Overlay Image">
+            <div id="overlayImageBorderId" class="${pokemons[i].typeSlot1}Card" onclick="overlayLoad(${i})">
+                <img id="overlayImageId" src="${pokemons[i].imageLarge}" alt="Overlay Image">
             </div >
             <div id="tabsId">
-            <div id="attributesID">attributes
+            <div id="attributesID" onclick="attributesMain(${i})">attributes
             </div>
-            <div id="statsID">
+            <div id="statsID" onclick="statsMain(${i})">stats
             </div>
-            <div id="evolutionsID">
+            <div id="evolutionsID" onclick="evolutionsMain(${i})">evolutions
             </div>
             </div>
             <div id="tabMainId">
-
-            <div id=attributesMainId>
-            <table>
-            <tr class="column1"><th>Base experience</th><th class="column2">${pokemons[i].base_experience}</th></tr>
-            <tr class="column1"><th>Height</th><th class="column2">${pokemons[i].height}</th></tr>
-            <tr class="column1"><th>Weight</th><th class="column2">${pokemons[i].weight}</th></tr>
-            <tr class="column1"><th>Abilities:</th><th class="column2">${pokemons[i].ability1 ? (pokemons[i].ability1 + (pokemons[i].ability1_hiden ? '*':'')): ""}  </th></tr>      
-            <tr class="column1"><th></th><th class="column2">${pokemons[i].ability2 ? (pokemons[i].ability2 + (pokemons[i].ability2_hiden ? '*':'')): ""}  </th></tr>      
-            <tr class="column1"><th></th><th class="column2">${pokemons[i].ability3 ? (pokemons[i].ability3 + (pokemons[i].ability3_hiden ? '*':'')): ""}  </th></tr>      
-            </table>
-            * Ability is hidden.
-            </div>
-
             </div>
 `;
+  attributesMain(i);
+}
+
+function attributesMain(i) {
+  document.getElementById("tabMainId").classList.remove("evolutionsCollor", "statsCollor");
+  document.getElementById("tabMainId").classList.add("attributesCollor");
+  document.getElementById("tabMainId").innerHTML = main(i);
+}
+
+function statsMain(i) {
+  document.getElementById("tabMainId").classList.remove("evolutionsCollor", "attributesCollor");
+  document.getElementById("tabMainId").classList.add("statsCollor");
+  document.getElementById("tabMainId").innerHTML = main(i);
+}
+
+function evolutionsMain(i) {
+  document.getElementById("tabMainId").classList.remove("attributesCollor", "statsCollor");
+  document.getElementById("tabMainId").classList.add("evolutionsCollor");
+  document.getElementById("tabMainId").innerHTML = main(i);
 }

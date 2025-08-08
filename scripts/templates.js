@@ -19,3 +19,20 @@ function filterButtons() {return `
                     <p class="fairy filterButton" onclick="myPokemonTypeList('fairy')">${filterArray.fairy?filterArray.fairy:''} Fairy</p>
 `
 }
+
+function main(i){
+
+            let value=`
+            <div id=attributesMainId>
+            <table>
+            <tr class="column1"><th>Base experience</th><th class="column2">${pokemons[i].base_experience}</th></tr>
+            <tr class="column1"><th>Height</th><th class="column2">${pokemons[i].height}</th></tr>
+            <tr class="column1"><th>Weight</th><th class="column2">${pokemons[i].weight}</th></tr>
+            <tr class="column1"><th>Abilities:</th><th class="column2">${pokemons[i].ability1 ? (pokemons[i].ability1 + (pokemons[i].ability1_hiden ? '*':'')): ""}  </th></tr>      
+            <tr class="column1"><th></th><th class="column2">${pokemons[i].ability2 ? (pokemons[i].ability2 + (pokemons[i].ability2_hiden ? '*':'')): ""}  </th></tr>      
+            <tr class="column1"><th></th><th class="column2">${pokemons[i].ability3 ? (pokemons[i].ability3 + (pokemons[i].ability3_hiden ? '*':'')): ""}  </th></tr>      
+            </table>
+            * Ability is hidden.
+            </div>`
+  return value
+}
