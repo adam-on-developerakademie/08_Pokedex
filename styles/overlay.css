@@ -15,19 +15,37 @@
   border-radius: 10px;
 }
 
+@media (max-width: 500px) {
+  #overlayId {
+    height: 400px;
+    width: 250px;
+  }
+}
+
 #overlayCloseId {
   height: 30px;
   margin-bottom: 20px;
   width: 100%;
   text-align: end;
 }
+
+@media (max-width: 500px) {
+  #overlayCloseId {
+    height: 25px;
+    margin-bottom: 10px;
+  }
+  #overlayCloseId > img {
+    height: 35px;
+  }
+}
+
 #overlayCloseId > img:hover {
   cursor: pointer;
   box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
     rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
     rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
   border-radius: 5px;
-  }
+}
 
 #overlayImageBorderId {
   height: 250px;
@@ -37,6 +55,14 @@
   justify-content: center;
   align-items: center;
 }
+
+@media (max-width: 500px) {
+  #overlayImageBorderId {
+    height: 120px;
+    width: 180px;
+  }
+}
+
 #overlayImageId {
   width: 100%;
   height: 100%;
@@ -53,6 +79,16 @@
   justify-content: space-between;
   gap: 5px;
 }
+
+@media (max-width: 500px) {
+  #overlayNaneId  {
+    margin: 0;
+  }
+  #overlayNaneId > img {
+    height: 35px;
+  }
+}
+
 #overlayNaneId > img:hover {
   cursor: pointer;
   box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
@@ -60,24 +96,20 @@
     rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
   border-radius: 5px;
 }
-/* 
-#tabsId {
-  display: flex;
-  width: 350px;
-} */
-#tabMainNavId{
+
+#tabMainNavId {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-#tabMainNavId>img{
+#tabMainNavId > img {
   width: 50px;
   height: 100%;
 }
 
-#tabMainNavId>img:hover{
-    cursor: pointer;
+#tabMainNavId > img:hover {
+  cursor: pointer;
   box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
     rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
     rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
@@ -94,7 +126,7 @@
 }
 
 #attributesMainId {
-  width: 95%;
+  width: 100%;
   height: 90%;
   font-size: 20px;
   color: rgb(0, 0, 0);
@@ -102,6 +134,29 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+@media (max-width: 500px) {
+  #tabMainNavId {
+    height: 220px;
+    width: 250px;
+  }
+  #tabMainId {
+    height: 210px;
+    width: 220px;
+  }
+
+  #tabMainNavId > img {
+    width: 20px;
+  }
+
+  #attributesMainId {
+    font-size: 14px;
+  }
+
+  table {
+    white-space: wrap !important ;
+  }
 }
 
 table {
