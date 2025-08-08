@@ -1,15 +1,18 @@
 let nomberOfProperties = Object.keys(properties[0]).length;
 let nIndex;
+const pokemonsSource="https://pokeapi.co/api/v2/pokemon/"
+const evolutionSource="https://pokeapi.co/api/v2/evolution-chain/" 
 
 async function getPokemon(n) {
   try {
     let k = pokemons.length;
     for (j = 0 + k; j < n + k; j++) {
-      let qLink = "https://pokeapi.co/api/v2/pokemon/" + (j + 1);
+      let qLink = pokemonsSource + (j + 1);
       const Response = await fetch(qLink);
       const data = await Response.json();
       prepairProperties(j, Response, data);
-      //j == k ? console.log(data) : "";
+      j == k ? console.log(data) : "";
+      console.log(data);
     }
   } catch (error) {
     console.log("Fehler: " + error);
@@ -33,9 +36,10 @@ async function getPokemonValue(j, i, data, Response) {
     let propertie =
       "pokemons[" + j + "]." + propertieName + "=" + eval(propertieValue);
     eval(propertie);
-    let wenn = eval(propertieObligatory);
+   /// let wenn = eval(propertieObligatory);
   }
 }
+
 
 async function getTypeNomber() {
   let typCounter = 0;

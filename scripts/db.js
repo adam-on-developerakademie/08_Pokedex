@@ -1,11 +1,11 @@
 let pokemons = [];
 let filter = [];
 let filterArray;
-let fullSides =0
-let page=0
-let wild=false
-let qOnPage=50
-let currentCard
+let fullSides = 0;
+let page = 0;
+let wild = false;
+let qOnPage = 50;
+let currentCard;
 
 let properties = [
   {
@@ -21,6 +21,21 @@ let properties = [
     typeSlot2: ["data.types.length == 2", "data.types[1].type.name"],
 
     imageFrontGif: [true, 'data.sprites.other.showdown["front_default"]'],
+    height: [true, "data.height"],
+    weight: [true, "data.weight"],
+    stat_hp: [true, "data.stats[0].base_stat"],
+    stat_attack: [true, "data.stats[1].base_stat"],
+    stat_defense: [true, "data.stats[2].base_stat"],
+    stat_specialAttack: [true, "data.stats[3].base_stat"],
+    stat_specialDefense: [true, "data.stats[4].base_stat"],
+    stat_speed: [true, "data.stats[5].base_stat"],
+    base_experience: [true, "data.base_experience"],
+    ability1: ["data.abilities[0] != null", "data.abilities[0].ability.name"],
+    ability1_hiden: ["data.abilities[0] != null", "data.abilities[0].is_hidden"],
+    ability2: ["data.abilities[1] != null", "data.abilities[1].ability.name"],
+    ability2_hiden: ["data.abilities[1] != null", "data.abilities[1].is_hidden"],
+    ability3: ["data.abilities[2] != null", "data.abilities[2].ability.name"],
+    ability3_hiden: ["data.abilities[2] != null", "data.abilities[2].is_hidden"],
   },
 ];
 
@@ -33,7 +48,7 @@ async function loadPokedex() {
     if (typeof localStorage != "undefined") {
       if (localStorage.getItem("pokemons") != null) {
         pokemons = JSON.parse(localStorage.getItem("pokemons"));
-        myPokemonList(pokemons.length,false);
+        myPokemonList(pokemons.length, false);
       } else {
         await reset();
       }
@@ -44,10 +59,10 @@ async function loadPokedex() {
 }
 
 function resetAsk() {
-
-  document.getElementById('reloadButtonID').classList.toggle('displayNone'), getTypeNomber();
-  document.getElementById('reloadAskButtonID').classList.toggle('displayNone'), getTypeNomber();
-  
+  document.getElementById("reloadButtonID").classList.toggle("displayNone"),
+    getTypeNomber();
+  document.getElementById("reloadAskButtonID").classList.toggle("displayNone"),
+    getTypeNomber();
 }
 
 async function reset() {
@@ -59,7 +74,7 @@ async function reset() {
   await savePokedex();
   await getPokemon(50);
   await savePokedex();
-  await myPokemonList(50,false);
+  await myPokemonList(50, false);
   await getTypeNomber();
   document.getElementById("reloadButtonID").style.backgroundColor = "";
 }

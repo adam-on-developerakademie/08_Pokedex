@@ -19,6 +19,11 @@
   src: url("/assets/fonts/Domine/Domine-VariableFont_wght.ttf");
 }
 
+@font-face {
+  font-family: "FreckleFace-Regular";
+  src: url("/assets/fonts/Freckle_Face/FreckleFace-Regular.ttf");
+}
+
 body {
   font-family: Pokemon;
   margin: 0;

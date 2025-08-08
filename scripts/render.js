@@ -14,7 +14,7 @@ function template(i) {
   x = `
  <div id="pokeCardId${i}" class="pokeCard ${pokemons[i].typeSlot1}Card" onclick="overlayLoad(${i})">
         <div class="cardHeader">   
-            <p>Nr.${i + 1}</p>
+            <p>#${('0000'+(i + 1)).slice((''+i).length)}</p>
         </div>
         <div class="imageBorder">
         <img id="imageLargeId${i}" class="imageLarge" src="${
