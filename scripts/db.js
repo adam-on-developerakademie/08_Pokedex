@@ -49,7 +49,7 @@ async function loadPokedex() {
     if (typeof localStorage != "undefined") {
       if (localStorage.getItem("pokemons") != null) {
         pokemons = JSON.parse(localStorage.getItem("pokemons"));
-        myPokemonList(pokemons.length, false);
+        await myPokemonList();
       } else {
         await reset();
       }
@@ -75,7 +75,7 @@ async function reset() {
   await savePokedex();
   await getPokemon(50);
   await savePokedex();
-  await myPokemonList(50, false);
+  await myPokemonList();
   await getTypeNomber();
   document.getElementById("reloadButtonID").style.backgroundColor = "";
 }

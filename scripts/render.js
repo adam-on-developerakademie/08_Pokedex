@@ -1,17 +1,16 @@
 async function myPokemonList() {
-  try {
-    let myDiv = document.getElementById("pokedex");
-    myDiv.innerHTML = "";
-    for (i = 0; i < pokemons.length; i++) {    document.getElementById("loaderCounter").innerHTML = i + "%";
-      fullSides = Math.ceil(i / qOnPage);
-      if (i >= page * qOnPage && i < page * qOnPage + qOnPage) {
-        myDiv.innerHTML += template(i);
-      }
+  let tempHTML = "";
+  let myDiv = document.getElementById("pokedex");
+  let k = 0;
+  for (i = 0; i < pokemons.length; i++) {
+    k = await usePromise(i, k, pokemons.length);
+    fullSides = Math.ceil(i / qOnPage);
+    if (i >= page * qOnPage && i < page * qOnPage + qOnPage) {
+      tempHTML += template(i);
     }
-    renderPagesbuttons();
-  } catch (myError) {
-    console.log(myError);
   }
+  myDiv.innerHTML = tempHTML;
+  renderPagesbuttons();
 }
 
 function template(i) {
@@ -80,7 +79,7 @@ async function search(lastChar) {
       }
     }
   } else {
-    myPokemonList();
+    await myPokemonList();
   }
 }
 
@@ -96,7 +95,5 @@ function numberOfTypes(array) {
     (accumulator, currentValue) => accumulator + currentValue,
     0
   );
-  document.getElementById(
-    "takeMoreButtonID"
-  ).innerHTML = `you have ${pokemons.length} <br> take next 20`;
+  document.getElementById("takeMoreButtonID").innerHTML = `you have ${pokemons.length} <br> take next 20`;
 }

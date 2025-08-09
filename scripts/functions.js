@@ -12,19 +12,19 @@ function closeFind() {
   document.getElementById("findId").classList.toggle("displayNone");
 }
 
-function wildFunction() {
+async function wildFunction() {
   document.getElementById("");
   let autoZoom = document.querySelector(":root");
-  wild=!wild
+  wild = !wild;
   if (wild) {
     autoZoom.style.setProperty("--imageLargeWidth", "100vh");
     autoZoom.style.setProperty("--imageLargeHeight", "100vh");
-    myPokemonList();
+    await myPokemonList();
   } else {
     document.getElementById("pokedexArea").style.justifyContent = "";
     autoZoom.style.setProperty("--imageLargeWidth", "80px");
     autoZoom.style.setProperty("--imageLargeHeight", "80px");
-    myPokemonList();
+    await myPokemonList();
   }
 }
 
@@ -82,28 +82,45 @@ async function setCardsCounter(j) {
     : document.getElementById("pokedexArea").classList.add("center");
 }
 
-function nextPage() {
-  (page + 1) > fullSides -1? page = 0 : page++;
+async function nextPage() {
+  page + 1 > fullSides - 1 ? (page = 0) : page++;
   renderPagesbuttons();
-    myPokemonList()
+  await myPokemonList();
 }
-function backPage() {
-   page <=0 ? page = fullSides -1 : page--;
+async function backPage() {
+  page <= 0 ? (page = fullSides - 1) : page--;
   renderPagesbuttons();
-    myPokemonList()
+  await myPokemonList();
 }
 
-function myToggle(id){
-  let x='document.getElementById("'+id+'").classList.toggle("displayNone")'
-  eval(x)
+function myToggle(id) {
+  let x =
+    'document.getElementById("' + id + '").classList.toggle("displayNone")';
+  eval(x);
 }
 
 function loaderOn() {
-  document.getElementById("loader").classList.remove("displayNone");  
-  document.getElementById("loaderCounter").classList.remove("displayNone");  
-  document.getElementById("loaderCounter").innerHTML='0%'
+  document.getElementById("loader").classList.remove("displayNone");
+  document.getElementById("loaderCounter").classList.remove("displayNone");
+  document.getElementById("loaderCounter").innerHTML = "0%";
 }
 function loaderOff() {
-  document.getElementById("loader").classList.add("displayNone");  
-  document.getElementById("loaderCounter").classList.add("displayNone");  
+  document.getElementById("loader").classList.add("displayNone");
+  document.getElementById("loaderCounter").classList.add("displayNone");
+}
+function myPromiseFunction() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve();
+    }, 0);
+  });
+}
+
+async function usePromise(i, k, n) {
+  j = Math.ceil((100 * i) / n);
+  if (k != j) {
+    document.getElementById("loaderCounter").innerHTML = j + "%";
+    await myPromiseFunction();
+  }
+  return j;
 }
