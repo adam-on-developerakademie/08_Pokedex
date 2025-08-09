@@ -132,6 +132,7 @@ footer {
   position: fixed;
   left: 0;
   top: 0;
+  pointer-events: none;
   background-color: transparent;
   display: flex;
   align-items: center;
@@ -155,4 +156,9 @@ footer {
   100% {
     transform: rotate(360deg);
   }
+}
+
+.dontTouch {
+  user-select: none;
+  pointer-events: none;
 }

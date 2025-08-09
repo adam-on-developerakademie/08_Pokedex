@@ -99,20 +99,22 @@ function myToggle(id) {
   eval(x);
 }
 
-function loaderOn() {
+async function loaderOn() {
   document.getElementById("loader").classList.remove("displayNone");
   document.getElementById("loaderCounter").classList.remove("displayNone");
   document.getElementById("loaderCounter").innerHTML = "0%";
+  await myPromiseFunction(200)
 }
-function loaderOff() {
+async function loaderOff() {
+  await myPromiseFunction(200)
   document.getElementById("loader").classList.add("displayNone");
   document.getElementById("loaderCounter").classList.add("displayNone");
 }
-function myPromiseFunction() {
+function myPromiseFunction(wait) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve();
-    }, 0);
+    }, wait);
   });
 }
 
@@ -120,7 +122,7 @@ async function usePromise(i, k, n) {
   j = Math.ceil((100 * i) / n);
   if (k != j) {
     document.getElementById("loaderCounter").innerHTML = j + "%";
-    await myPromiseFunction();
+    await myPromiseFunction(0);
   }
   return j;
 }

@@ -8,10 +8,15 @@ async function init() {
 }
 
 async function nPokempnsGet(n) {
-  loaderOn() 
+  const myButton= document.getElementById('takeMoreButtonID')
+  myButton.classList.add('dontTouch')
+  await loaderOn() 
   await getPokemon(n);
-  await savePokedex();
   await getTypeNomber();
   await myPokemonList();
-  loaderOff() 
+  await savePokedex();
+  await loaderOff() 
+  myButton.classList.remove('dontTouch')
+ 
+  
 }
