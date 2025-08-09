@@ -17,8 +17,8 @@
 
 @media (max-width: 500px) {
   #overlayId {
-    height: 400px;
-    width: 250px;
+    height: 450px;
+    width: 300px;
   }
 }
 
@@ -56,8 +56,8 @@
 
 @media (max-width: 500px) {
   #overlayImageBorderId {
-    height: 120px;
-    width: 180px;
+    height: 150px;
+    width: 210px;
   }
 }
 
@@ -91,7 +91,7 @@
 
 #overlayNaneId > img:hover {
   cursor: pointer;
-  transform: scale(1.9);
+  transform: scale(1.5);
   transition-duration: 0.5s;
 }
 
@@ -108,7 +108,7 @@
 
 #tabMainNavId > img:hover {
   cursor: pointer;
-  transform: scale(1.3);
+  transform: scale(1.1);
   transition-duration: 0.5s;
 }
 
@@ -134,16 +134,16 @@
 
 @media (max-width: 500px) {
   #tabMainNavId {
-    height: 220px;
-    width: 250px;
+    height: 250px;
+    width: 300px;
   }
   #tabMainId {
     height: 210px;
-    width: 220px;
+    width: 250px;
   }
 
   #tabMainNavId > img {
-    width: 20px;
+    width: 30px;
   }
 
   #attributesMainId {

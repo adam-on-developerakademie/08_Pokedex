@@ -1,20 +1,26 @@
 async function myPokemonList() {
-  let myDiv = document.getElementById("pokedex");
-  myDiv.innerHTML = "";
-  for (i = 0; i < pokemons.length; i++) {
-    fullSides = Math.ceil(i / qOnPage);
-    if (i >= page * qOnPage && i < page * qOnPage + qOnPage) {
-      myDiv.innerHTML += template(i, wild);
+  try {
+    let myDiv = document.getElementById("pokedex");
+    myDiv.innerHTML = "";
+    for (i = 0; i < pokemons.length; i++) {    document.getElementById("loaderCounter").innerHTML = i + "%";
+      fullSides = Math.ceil(i / qOnPage);
+      if (i >= page * qOnPage && i < page * qOnPage + qOnPage) {
+        myDiv.innerHTML += template(i);
+      }
     }
+    renderPagesbuttons();
+  } catch (myError) {
+    console.log(myError);
   }
-  renderPagesbuttons();
 }
 
 function template(i) {
   x = `
- <div id="pokeCardId${i}" class="pokeCard ${pokemons[i].typeSlot1}Card" onclick="overlayLoad(${i})">
+ <div id="pokeCardId${i}" class="pokeCard ${
+    pokemons[i].typeSlot1
+  }Card" onclick="overlayLoad(${i})">
         <div class="cardHeader">   
-            <p>#${('0000'+(i + 1)).slice((''+i).length)}</p>
+            <p>#${("0000" + (i + 1)).slice(("" + i).length)}</p>
         </div>
         <div class="imageBorder">
         <img id="imageLargeId${i}" class="imageLarge" src="${
@@ -38,11 +44,16 @@ function template(i) {
 
 function renderPagesbuttons() {
   document.getElementById("pagesId").innerHTML = `${page + 1} / ${fullSides}`;
+  loaderOff();
 }
 
-function allTogether() {
+async function allTogether() {
+  loaderOn();
   page = 0;
-  myPokemonList();
+  qOnPage = pokemons.length;
+  await myPokemonList();
+  qOnPage = 50;
+  loaderOff();
 }
 
 async function myPokemonTypeList(x) {
@@ -65,7 +76,7 @@ async function search(lastChar) {
     myDiv.innerHTML = "";
     for (i = 0; i < pokemons.length; i++) {
       if (pokemons[i].name.match(myName.toLowerCase())) {
-        myDiv.innerHTML += template(i)
+        myDiv.innerHTML += template(i);
       }
     }
   } else {
@@ -81,6 +92,11 @@ function numberOfTypes(array) {
   delete counter.undefined;
   filterArray = counter;
   document.getElementById("typesBarId").innerHTML = filterButtons();
-  let n=Object.values(filterArray).reduce((accumulator, currentValue) => accumulator + currentValue, 0);
-   document.getElementById("take100ButtonID").innerHTML =`you have ${pokemons.length} <br> take next 20`
+  let n = Object.values(filterArray).reduce(
+    (accumulator, currentValue) => accumulator + currentValue,
+    0
+  );
+  document.getElementById(
+    "takeMoreButtonID"
+  ).innerHTML = `you have ${pokemons.length} <br> take next 20`;
 }

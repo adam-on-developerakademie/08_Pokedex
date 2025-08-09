@@ -14,7 +14,8 @@
 </head>
 
 <body onload="init()">
-
+<div id="loader" class="displayNone"></div>
+<div id="loaderCounter" class="displayNone">0%</div>
     <header>
         <div id="headerTextid">
             <p class="headerText">
@@ -25,7 +26,7 @@
     <main>
         <div id="mainDivId1">
             <div id="sidbarId">
-                <p id="take100ButtonID" class="green filterButton" onclick="nPokempnsGet(20)">take next 20</p>
+                <p id="takeMoreButtonID" class="green filterButton" onclick="nPokempnsGet(20)">take next 20</p>
                 <p id="pagesId" class="green filterButton"></p>
                 <div id="pagesSelectorId">
                     <p class="pageButton" onclick="backPage()">back</p>

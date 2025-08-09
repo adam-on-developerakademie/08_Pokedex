@@ -97,3 +97,13 @@ function myToggle(id){
   let x='document.getElementById("'+id+'").classList.toggle("displayNone")'
   eval(x)
 }
+
+function loaderOn() {
+  document.getElementById("loader").classList.remove("displayNone");  
+  document.getElementById("loaderCounter").classList.remove("displayNone");  
+  document.getElementById("loaderCounter").innerHTML='0%'
+}
+function loaderOff() {
+  document.getElementById("loader").classList.add("displayNone");  
+  document.getElementById("loaderCounter").classList.add("displayNone");  
+}

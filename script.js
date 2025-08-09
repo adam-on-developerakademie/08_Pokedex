@@ -8,13 +8,10 @@ async function init() {
 }
 
 async function nPokempnsGet(n) {
+  loaderOn() 
   await getPokemon(n);
   await savePokedex();
   await getTypeNomber();
   await myPokemonList();
+  loaderOff() 
 }
-
-
-
-
-

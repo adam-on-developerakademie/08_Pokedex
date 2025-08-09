@@ -6,6 +6,7 @@ let page = 0;
 let wild = false;
 let qOnPage = 50;
 let currentCard;
+let readyNow=false
 
 let properties = [
   {
