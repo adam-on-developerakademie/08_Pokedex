@@ -67,7 +67,7 @@
   object-fit: contain;
 }
 
-#overlayNaneId {
+#overlayNameId {
   font-size: 24px;
   font-weight: 700;
   height: 30px;
@@ -81,39 +81,38 @@
 }
 
 @media (max-width: 500px) {
-  #overlayNaneId {
+  #overlayNameId {
     font-size: 16px;
     margin: 0;
   }
-  #overlayNaneId > img {
+  #overlayNameId > img {
     height: 35px;
   }
 }
 
-#overlayNaneId > img:hover {
+#overlayNameId > img:hover {
   cursor: pointer;
   transform: scale(1.5);
   transition-duration: 0.5s;
 }
 
-#tabMainNavId {
+#overlayViewNavId {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-#tabMainNavId > img {
+#overlayViewNavId > img {
   width: 50px;
-  height: 100%;
 }
 
-#tabMainNavId > img:hover {
+#overlayViewNavId > img:hover {
   cursor: pointer;
   transform: scale(1.1);
   transition-duration: 0.5s;
 }
 
-#tabMainId {
+#overlayViewId {
   height: 250px;
   width: 350px;
   border-radius: 10px;
@@ -122,9 +121,9 @@
   justify-content: center;
 }
 
-#attributesMainId {
+#attributesViewId {
   width: 100%;
-  height: 90%;
+  height: 100%;
   font-size: 20px;
   color: rgb(0, 0, 0);
   overflow: hidden;
@@ -134,20 +133,20 @@
 }
 
 @media (max-width: 500px) {
-  #tabMainNavId {
+  #overlayViewNavId {
     height: 250px;
     width: 300px;
   }
-  #tabMainId {
+  #overlayViewId {
     height: 210px;
     width: 250px;
   }
 
-  #tabMainNavId > img {
+  #overlayViewNavId > img {
     width: 30px;
   }
 
-  #attributesMainId {
+  #attributesViewId {
     font-size: 14px;
   }
 
@@ -159,4 +158,45 @@
 table {
   text-align: left;
   white-space: nowrap;
+}
+
+.attributesCollumn1 {
+  width: 150px;
+}
+
+@media (max-width: 500px) {
+  .attributesCollumn1 {
+    width: 100px;
+  }
+}
+
+.statsCollumn1 {
+  width: 150px;
+}
+
+.statsCollumn2 {
+  width: 40px;
+}
+
+.block {
+  height: 30px;
+  width: 10px;
+  border: 1px solid black;
+}
+
+.statsBlock {
+  display: flex;
+}
+
+@media (max-width: 500px) {
+  .statsCollumn1 {
+    width: 100px;
+  }
+  .statsCollumn2 {
+    width: 20px;
+  }
+  .block {
+    width: 6px;
+    height: 25px;
+  }
 }

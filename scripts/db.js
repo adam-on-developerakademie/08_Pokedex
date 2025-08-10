@@ -4,9 +4,11 @@ let filterArray;
 let fullSides = 0;
 let page = 0;
 let wild = false;
-let qOnPage = 50;
+let qOnPage = 100;
 let currentCard;
 let readyNow=false
+let currentView=0
+let stats=['hp','attack','defense','specialAttack','specialDefense','speed']
 
 let properties = [
   {
@@ -73,7 +75,7 @@ async function reset() {
   localStorage.clear();
   pokemons.length = 0;
   await savePokedex();
-  await getPokemon(50);
+  await getPokemon(20);
   await savePokedex();
   await myPokemonList();
   await getTypeNomber();

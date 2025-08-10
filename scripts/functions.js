@@ -83,14 +83,21 @@ async function setCardsCounter(j) {
 }
 
 async function nextPage() {
+  const myButton= document.getElementById('pagesSelectorId')
+  myButton.classList.add('dontTouch')
   page + 1 > fullSides - 1 ? (page = 0) : page++;
   renderPagesbuttons();
   await myPokemonList();
+  myButton.classList.remove('dontTouch')
 }
+
 async function backPage() {
+  const myButton= document.getElementById('pagesSelectorId')
+  myButton.classList.add('dontTouch')
   page <= 0 ? (page = fullSides - 1) : page--;
   renderPagesbuttons();
   await myPokemonList();
+  myButton.classList.remove('dontTouch')
 }
 
 function myToggle(id) {

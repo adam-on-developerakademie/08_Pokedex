@@ -4,7 +4,7 @@ const pokemonsSource = "https://pokeapi.co/api/v2/pokemon/";
 const evolutionSource = "https://pokeapi.co/api/v2/evolution-chain/";
 
 async function getPokemon(n) {
-  loaderOn()
+  loaderOn();
   try {
     let k = pokemons.length;
     for (j = 0 + k; j < n + k; j++) {
@@ -29,27 +29,11 @@ async function prepairProperties(j, Response, data) {
 
 async function getPokemonValue(j, i, data, Response) {
   let propertieName = Object.keys(properties[0])[i];
-  let propertieObligatory =
-    "properties[0]." + Object.keys(properties[0])[i] + "[0]";
+  let propertieObligatory = "properties[0]." + Object.keys(properties[0])[i] + "[0]";
   if (eval(eval(propertieObligatory))) {
-    let propertieValue =
-      "properties[0]." + Object.keys(properties[0])[i] + "[1]";
-    let propertie =
-      "pokemons[" + j + "]." + propertieName + "=" + eval(propertieValue);
+    let propertieValue = "properties[0]." + Object.keys(properties[0])[i] + "[1]";
+    let propertie = "pokemons[" + j + "]." + propertieName + "=" + eval(propertieValue);
     eval(propertie);
-    /// let wenn = eval(propertieObligatory);
   }
 }
 
-async function getTypeNomber() {
-  let typCounter = 0;
-  let typName = "";
-  filter.length = 0;
-  for (i = 0; i < pokemons.length; i++) {
-    typName = pokemons[i].typeSlot1;
-    filter.push(typName);
-    typName = pokemons[i].typeSlot2;
-    filter.push(typName);
-  }
-  numberOfTypes(filter);
-}
