@@ -60,23 +60,26 @@ function filterButtons() {
 function overlayTamplate(i) {
   return `
  <div id="overlayCloseId"><img src="./assets/icons/close.png" onclick="myToggle('overlayId')"></div>
+  <div class="overlayNameId">
+  <p id="overlayNameValueId">#${
+    ("0000" + (i + 1)).slice(("" + i).length) +
+    " " +
+    fLetterUp(pokemons[i].name)
+  }</p>
+ </div>
  <div id="overlayImageBorderId" class="${
    pokemons[i].typeSlot1
  }Card" onclick="overlayLoad(${i})">
  <img id="overlayImageId" src="${pokemons[i].imageLarge}" alt="Overlay Image">
  </div>
- <div id="overlayNameId">
- <img src="./assets/icons/arrow_backward.png" onclick="previousPokemon (${i})">
- <p id="overlayNameValueId">#${
-   ("0000" + (i + 1)).slice(("" + i).length) + " " + fLetterUp(pokemons[i].name)
- }</p>
- <img src="./assets/icons/arrow_forward.png" onclick="nextPokemon (${i})">
+ <div class="changePokemon">
+ <button id="previousPokemonButton" class="overlayButton" onclick="previousPokemon (${i})">previous Pokemon</button>
+ <button id="nextPokemonButton" class="overlayButton" onclick="nextPokemon (${i})">next Pokemon</button>
  </div>
  </div>
- <div id="overlayViewNavId">
- <img src="./assets/icons/arrow_backward.png" onclick="previousView (${i})">
+ <div class="overlayViewNavId">
+ <button id="nextViewButton" class="overlayButton" onclick="nextView (${i})">next Infoview</button>
  <div id="overlayViewId"></div>
- <img src="./assets/icons/arrow_forward.png" onclick="nextView (${i})">
  </div>
 `;
 }
@@ -162,36 +165,14 @@ function statsTamplate(i) {
   return value;
 }
 
-function evolutionsTamplate(i) {
+function shinyTamplate(i) {
   let value = `
- <div id=attributesViewId>
- <table>
- <tr><td>Base experience</td><td>${pokemons[i].base_experience}</td></tr>
- <tr><td>Height</td><td>${pokemons[i].height}</td></tr>
- <tr><td>Weight</td><td>${pokemons[i].weight}</td></tr>
- <tr><td>Abilities</td><td>${
-   pokemons[i].ability1
-     ? "1. " + (pokemons[i].ability1 + (pokemons[i].ability1_hiden ? " *" : ""))
-     : ""
- } </td></tr> 
- <tr><td></td><td>${
-   pokemons[i].ability2
-     ? "2. " + (pokemons[i].ability2 + (pokemons[i].ability2_hiden ? " *" : ""))
-     : ""
- } </td></tr> 
- <tr><td></td><td>${
-   pokemons[i].ability3
-     ? "3. " + (pokemons[i].ability3 + (pokemons[i].ability3_hiden ? " *" : ""))
-     : ""
- } </td></tr> 
- </table>
- ${
-   pokemons[i].ability1_hiden ||
-   pokemons[i].ability2_hiden ||
-   pokemons[i].ability3_hiden
-     ? "* Ability is hidden."
-     : ""
- }
- </div>`;
+  <div class="overlayNameShiny">
+  <p>Shiny</p>
+
+<div id="overlayImageBorderShinyId" class="${pokemons[i].typeSlot1}Card" onclick="overlayLoad(${i})">
+ <img id="overlayImageId" src="${pokemons[i].imageLargeShiny}" alt="Overlay Image">
+ </div>
+  </div>`;
   return value;
 }

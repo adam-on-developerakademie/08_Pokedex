@@ -1,5 +1,5 @@
 #overlayId {
-  height: 650px;
+  height: 700px;
   width: 450px;
   position: absolute;
   top: 50%;
@@ -17,14 +17,13 @@
 
 @media (max-width: 500px) {
   #overlayId {
-    height: 450px;
+    height: 480px;
     width: 300px;
   }
 }
 
 #overlayCloseId {
   height: 30px;
-  margin-bottom: 20px;
   width: 100%;
   text-align: end;
 }
@@ -32,7 +31,6 @@
 @media (max-width: 500px) {
   #overlayCloseId {
     height: 25px;
-    margin-bottom: 10px;
   }
   #overlayCloseId > img {
     height: 35px;
@@ -54,10 +52,24 @@
   align-items: center;
 }
 
+#overlayImageBorderShinyId {
+  height: 250px;
+  width: 350px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @media (max-width: 500px) {
   #overlayImageBorderId {
     height: 150px;
-    width: 210px;
+    width: 250px;
+  }
+
+    #overlayImageBorderShinyId {
+    height: 150px;
+    width: 250px;
   }
 }
 
@@ -67,38 +79,75 @@
   object-fit: contain;
 }
 
-#overlayNameId {
+.overlayNameId {
   font-size: 24px;
   font-weight: 700;
+  margin-bottom: 3px;
   height: 30px;
   width: 100%;
-  margin-top: 10px;
-  margin-bottom: 20px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 5px;
 }
 
 @media (max-width: 500px) {
-  #overlayNameId {
+  .overlayNameId {
     font-size: 16px;
     margin: 0;
   }
-  #overlayNameId > img {
-    height: 35px;
+}
+
+.overlayNameShiny {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 3px;
+  height: 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+@media (max-width: 500px) {
+  .overlayNameShiny {
+    font-size: 16px;
+    margin: 0;
   }
 }
 
-#overlayNameId > img:hover {
-  cursor: pointer;
-  transform: scale(1.5);
-  transition-duration: 0.5s;
+button{
+   font-family: Pokemon-Bold;
+}
+
+.changePokemon {
+  width: 350px;
+  display: flex;
+}
+@media (max-width: 500px) {
+  .changePokemon {
+    width: 250px;
+  }
+   button {
+    font-size: 10px;
+   }
+}
+#nextViewButton{
+  margin-bottom: 10px;
+}
+
+.overlayButton {
+  width: 100%;
+  margin-top: 10px;
 }
 
 #overlayViewNavId {
+  height: 100%;
   width: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -114,7 +163,7 @@
 }
 
 #overlayViewId {
-  height: 250px;
+  height: 300px;
   width: 350px;
   border-radius: 10px;
   display: flex;
@@ -133,6 +182,12 @@
   justify-content: space-between;
 }
 
+table {
+  text-align: left;
+  white-space: nowrap;
+  margin-top: 20px;
+}
+
 @media (max-width: 500px) {
   #overlayViewNavId {
     height: 250px;
@@ -140,7 +195,7 @@
   }
 
   #overlayViewId {
-    height: 210px;
+    height: 200px;
     width: 250px;
   }
 
@@ -154,12 +209,9 @@
 
   table {
     white-space: wrap !important ;
-  }
-}
+     margin-top: 10px;
 
-table {
-  text-align: left;
-  white-space: nowrap;
+  }
 }
 
 .attributesCollumn1 {
@@ -181,7 +233,7 @@ table {
 }
 
 .block {
-  height: 30px;
+  height: 40px;
   width: 10px;
   border: 1px solid black;
 }
