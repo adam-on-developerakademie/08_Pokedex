@@ -17,13 +17,17 @@ async function wildFunction() {
   let autoZoom = document.querySelector(":root");
   wild = !wild;
   if (wild) {
-    autoZoom.style.setProperty("--imageLargeWidth", "100vh");
-    autoZoom.style.setProperty("--imageLargeHeight", "100vh");
+    autoZoom.style.setProperty("--imageLargeWidth", "70vh");
+    autoZoom.style.setProperty("--imageLargeHeight", "70vh");
+    document.getElementById('pokedexArea').classList.add('showInCenter')
+    document.getElementById('pokedex').classList.add('showInCenter')
     await myPokemonList();
   } else {
     document.getElementById("pokedexArea").style.justifyContent = "";
     autoZoom.style.setProperty("--imageLargeWidth", "80px");
     autoZoom.style.setProperty("--imageLargeHeight", "80px");
+    document.getElementById('pokedexArea').classList.remove('showInCenter')
+    document.getElementById('pokedex').classList.remove('showInCenter')
     await myPokemonList();
   }
 }

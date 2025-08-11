@@ -1,7 +1,6 @@
 function overlayLoad(i) {
   let overlay = document.getElementById("overlayId");
   overlay.classList.remove("displayNone");
-  console.log(pokemons[i]);
   overlay.innerHTML = `
             <div id="overlayCloseId"><img src="./assets/icons/close.png" onclick="myToggle('overlayId')"></div>
             <div id="overlayImageBorderId" class="${pokemons[i].typeSlot1}Card" onclick="overlayLoad(${i})">

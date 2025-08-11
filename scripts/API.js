@@ -1,5 +1,9 @@
 let nomberOfProperties = Object.keys(properties[0]).length;
 let nIndex;
+let evolution={}
+let evolutionIndex = 0;
+let evolutionIndexFail=[]
+
 const pokemonsSource = "https://pokeapi.co/api/v2/pokemon/";
 const evolutionSource = "https://pokeapi.co/api/v2/evolution-chain/";
 
@@ -37,3 +41,23 @@ async function getPokemonValue(j, i, data, Response) {
   }
 }
 
+async function getFamily(n) {
+  try {
+    for ( myIndex = n; myIndex <= evolutionIndex; myIndex++) {
+      let qLink = evolutionSource + (evolutionIndex == 0 ? "" : myIndex);
+      if (evolutionIndexFail.includes(myIndex)){}else{
+      const Response = await fetch(qLink);
+      const data = await Response.json();
+      myIndex == 0 ? evolutionIndex=data.count:
+      console.log(Response);
+      console.log(data);
+      console.log(myIndex +'   '+ evolutionIndex)
+    }}
+  } catch (error) {
+    console.log("Fehler: " + error);
+    evolutionIndexFail.push(myIndex)
+    console.log(evolutionIndexFail);
+    getFamily(myIndex+1) 
+  }
+}
+getFamily(0);

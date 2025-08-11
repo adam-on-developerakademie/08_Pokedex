@@ -8,6 +8,22 @@
   background-color: rgba(99, 99, 99, 0.3);
 }
 
+.showInCenter {
+  gap: 50px !important;
+  padding-top: 100px;
+  padding-left: 60px;
+  padding-right: 200px;
+}
+
+@media (max-width: 500px) {
+  .showInCenter {
+    gap: 0px !important;
+    padding-top: 70px;
+    padding-left: 1px;
+    padding-right: 1px;
+  }
+}
+
 #pokedex {
   width: 99%;
   display: flex;
@@ -15,7 +31,7 @@
   justify-content: space-evenly;
   flex-wrap: wrap;
   max-width: 1920px;
-  gap: 5px;
+  row-gap: 5px;
 }
 
 .pokeCard {
