@@ -102,6 +102,7 @@
   align-items: center;
   justify-content: center;
 }
+
 #overlayViewNavId > img {
   width: 50px;
 }
@@ -137,6 +138,7 @@
     height: 250px;
     width: 300px;
   }
+
   #overlayViewId {
     height: 210px;
     width: 250px;
@@ -192,9 +194,11 @@ table {
   .statsCollumn1 {
     width: 100px;
   }
+
   .statsCollumn2 {
     width: 20px;
   }
+
   .block {
     width: 6px;
     height: 25px;

@@ -35,9 +35,6 @@
 }
 
 .pokeCard {
-  /*   
-  width: var(--pokeCardWidth);
-  height: var(--pokeCardHeight); */
   width: min(120px, 252px);
   height: min(170px, 352px);
   display: flex;
@@ -47,6 +44,7 @@
   border: 1px solid black;
   border-radius: 10px;
 }
+
 .cardHeader {
   font-family: Pokemon;
   font-size: 14px;
@@ -74,6 +72,7 @@
   padding: 0;
   margin: 0;
 }
+
 .pokeCard:hover {
   transform: scale(1.03);
   transition-duration: 0.5s;
@@ -129,55 +128,70 @@
   box-shadow: rgb(164, 164, 164) 0px 30px 60px -12px inset,
     rgb(164, 164, 164) 0px 18px 36px -18px inset;
 }
+
 .normal {
   background-color: #a4a4a4;
 }
+
 .fireCard {
   box-shadow: rgb(233, 65, 39) 0px 30px 60px -12px inset,
     rgb(233, 65, 39) 0px 18px 36px -18px inset;
 }
+
 .fire {
   background-color: #e94127;
 }
+
 .fightingCard {
   box-shadow: rgb(208, 127, 72) 0px 30px 60px -12px inset,
     rgb(208, 127, 72) 0px 18px 36px -18px inset;
 }
+
 .fighting {
   background-color: #d07f48;
 }
+
 .waterCard {
   box-shadow: rgb(80, 129, 195) 0px 30px 60px -12px inset,
     rgb(80, 129, 195) 0px 18px 36px -18px inset;
 }
+
 .water {
   background-color: #5081c3;
 }
+
 .flyingCard {
   box-shadow: rgb(58, 96, 169) 0px 30px 60px -12px inset,
     rgb(58, 96, 169) 0px 18px 36px -18px inset;
 }
+
 .flying {
   background-color: #3a60a9;
 }
+
 .grassCard {
   box-shadow: rgb(83, 169, 58) 0px 30px 60px -12px inset,
     rgb(84, 169, 58) 0px 18px 36px -18px inset;
 }
+
 .grass {
   background-color: #53a93a;
 }
+
 .poisonCard {
   box-shadow: rgb(164, 104, 168) 0px 30px 60px -12px inset,
     rgb(164, 104, 168) 0px 18px 36px -18px inset;
 }
+
 .poison {
   background-color: #a468a8;
 }
+
 .electricCard {
   box-shadow: rgb(187, 176, 58) 0px 30px 60px -12px inset,
     rgb(187, 176, 58) 0px 18px 36px -18px inset;
 }
+
 .electric {
   background-color: #bbb03a;
 }
@@ -185,41 +199,52 @@
   box-shadow: rgb(162, 101, 34) 0px 30px 60px -12px inset,
     rgb(162, 101, 34) 0px 18px 36px -18px inset;
 }
+
 .ground {
   background-color: #a26522;
 }
+
 .psychicCard {
   box-shadow: rgb(201, 114, 149) 0px 30px 60px -12px inset,
     rgb(201, 114, 149) 0px 18px 36px -18px inset;
 }
+
 .psychic {
   background-color: #c97295;
 }
+
 .rockCard {
   box-shadow: rgb(132, 92, 57) 0px 30px 60px -12px inset,
     rgb(132, 92, 57) 0px 18px 36px -18px inset;
 }
+
 .rock {
   background: #845c39;
 }
+
 .iceCard {
   box-shadow: rgb(79, 179, 171) 0px 30px 60px -12px inset,
     rgb(79, 179, 171) 0px 18px 36px -18px inset;
 }
+
 .ice {
   background: #4fb3ab;
 }
+
 .bugCard {
   box-shadow: rgb(92, 163, 97) 0px 30px 60px -12px inset,
     rgb(92, 163, 97) 0px 18px 36px -18px inset;
 }
+
 .bug {
   background-color: #5ca361;
 }
+
 .dragonCard {
   box-shadow: rgb(62, 145, 53) 0px 30px 60px -12px inset,
     rgb(62, 145, 53) 0px 18px 36px -18px inset;
 }
+
 .dragon {
   background-color: #3e9135;
 }
@@ -227,41 +252,52 @@
   box-shadow: rgb(102, 94, 167) 0px 30px 60px -12px inset,
     rgb(102, 94, 167) 0px 18px 36px -18px inset;
 }
+
 .ghost {
   background-color: #665ea7;
 }
+
 .darkCard {
   box-shadow: rgb(134, 83, 140) 0px 30px 60px -12px inset,
     rgb(134, 83, 140) 0px 18px 36px -18px inset;
 }
+
 .dark {
   background-color: #86538c;
 }
+
 .steelCard {
   box-shadow: rgb(91, 129, 150) 0px 30px 60px -12px inset,
     rgb(91, 129, 150) 0px 18px 36px -18px inset;
 }
+
 .steel {
   background-color: #5b8196;
 }
+
 .fairyCard {
   box-shadow: rgb(218, 151, 195) 0px 30px 60px -12px inset,
     rgb(218, 151, 195) 0px 18px 36px -18px inset;
 }
+
 .fairy {
   background-color: #da97c3;
 }
+
 .allCard {
   box-shadow: rgb(0, 0, 0) 0px 30px 60px -12px inset,
     rgb(0, 0, 0) 0px 18px 36px -18px inset;
 }
+
 .all {
   background-color: #000000;
 }
+
 .wilsCard {
   box-shadow: rgb(83, 169, 58) 0px 30px 60px -12px inset,
     rgb(84, 169, 58) 0px 18px 36px -18px inset;
 }
+
 .wild {
   background-image: linear-gradient(red, yellow, green);
 }

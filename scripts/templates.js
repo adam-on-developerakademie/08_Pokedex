@@ -57,6 +57,30 @@ function filterButtons() {
 `;
 }
 
+function overlayTamplate(i) {
+  return `
+ <div id="overlayCloseId"><img src="./assets/icons/close.png" onclick="myToggle('overlayId')"></div>
+ <div id="overlayImageBorderId" class="${
+   pokemons[i].typeSlot1
+ }Card" onclick="overlayLoad(${i})">
+ <img id="overlayImageId" src="${pokemons[i].imageLarge}" alt="Overlay Image">
+ </div>
+ <div id="overlayNameId">
+ <img src="./assets/icons/arrow_backward.png" onclick="previousPokemon (${i})">
+ <p id="overlayNameValueId">#${
+   ("0000" + (i + 1)).slice(("" + i).length) + " " + fLetterUp(pokemons[i].name)
+ }</p>
+ <img src="./assets/icons/arrow_forward.png" onclick="nextPokemon (${i})">
+ </div>
+ </div>
+ <div id="overlayViewNavId">
+ <img src="./assets/icons/arrow_backward.png" onclick="previousView (${i})">
+ <div id="overlayViewId"></div>
+ <img src="./assets/icons/arrow_forward.png" onclick="nextView (${i})">
+ </div>
+`;
+}
+
 function template(i) {
   let value = `
  <div id="pokeCardId${i}" class="pokeCard ${

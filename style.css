@@ -49,6 +49,7 @@ body {
     background: rgba(99, 99, 99, 0.3);
   }
 }
+
 header {
   height: 5vh;
   width: 100%;
@@ -94,6 +95,7 @@ footer {
 .displayNone {
   display: none !important;
 }
+
 .center {
   justify-content: center;
 }
@@ -149,6 +151,7 @@ footer {
   border-radius: 50%;
   animation: mySpin 1s infinite;
 }
+
 @keyframes mySpin {
   0% {
     transform: rotate(0deg);

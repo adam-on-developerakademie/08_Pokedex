@@ -44,6 +44,7 @@
   text-shadow: rgb(0, 0, 0) -1px -1px 0px, rgb(0, 0, 0) 1px -1px 0px,
     rgb(0, 0, 0) -1px 1px 0px, rgb(0, 0, 0) 1px 1px 0px;
 }
+
 .filterButton:hover {
   cursor: pointer;
   transform: scale(1.03);
@@ -92,6 +93,7 @@
   width: 96%;
   display: flex;
 }
+
 .pageButton {
   display: flex;
   flex-direction: column;
@@ -108,6 +110,7 @@
   text-shadow: rgb(0, 0, 0) -1px -1px 0px, rgb(0, 0, 0) 1px -1px 0px,
     rgb(0, 0, 0) -1px 1px 0px, rgb(0, 0, 0) 1px 1px 0px;
 }
+
 .pageButton:hover {
   cursor: pointer;
   transform: scale(1.03);
@@ -116,14 +119,17 @@
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
     rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
+
 .seidControl {
   width: 100px;
   background-color: green;
   display: flex;
 }
+
 .green {
   background-color: green;
 }
+
 .white {
   background-color: white;
 }

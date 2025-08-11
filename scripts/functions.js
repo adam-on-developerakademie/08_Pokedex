@@ -17,34 +17,37 @@ async function wildFunction() {
   let autoZoom = document.querySelector(":root");
   wild = !wild;
   if (wild) {
-    autoZoom.style.setProperty("--imageLargeWidth", "70vh");
-    autoZoom.style.setProperty("--imageLargeHeight", "70vh");
-    document.getElementById('pokedexArea').classList.add('showInCenter')
-    document.getElementById('pokedex').classList.add('showInCenter')
-    await myPokemonList();
+    wildIn(autoZoom);
   } else {
-    document.getElementById("pokedexArea").style.justifyContent = "";
-    autoZoom.style.setProperty("--imageLargeWidth", "80px");
-    autoZoom.style.setProperty("--imageLargeHeight", "80px");
-    document.getElementById('pokedexArea').classList.remove('showInCenter')
-    document.getElementById('pokedex').classList.remove('showInCenter')
-    await myPokemonList();
+    wildOut(autoZoom);
   }
+}
+
+async function wildIn(autoZoom) {
+  autoZoom.style.setProperty("--imageLargeWidth", "70vh");
+  autoZoom.style.setProperty("--imageLargeHeight", "70vh");
+  document.getElementById("pokedexArea").classList.add("showInCenter");
+  document.getElementById("pokedex").classList.add("showInCenter");
+  await myPokemonList();
+}
+
+async function wildOut(autoZoom) {
+  document.getElementById("pokedexArea").style.justifyContent = "";
+  autoZoom.style.setProperty("--imageLargeWidth", "80px");
+  autoZoom.style.setProperty("--imageLargeHeight", "80px");
+  document.getElementById("pokedexArea").classList.remove("showInCenter");
+  document.getElementById("pokedex").classList.remove("showInCenter");
+  await myPokemonList();
 }
 
 async function findTyp(x) {
   let myDiv = document.getElementById("pokeCardId");
   let j = 0;
   for (i = 0; i < pokemons.length; i++) {
-    if (
-      (pokemons[i].typeSlot1 == x || pokemons[i].typeSlot2 == x) &&
-      i >= page * qOnPage &&
-      i < page * qOnPage + qOnPage
-    ) {
+    if ((pokemons[i].typeSlot1 == x || pokemons[i].typeSlot2 == x) && i >= page * qOnPage && i < page * qOnPage + qOnPage ) {
       j = j + 1;
       document.getElementById("pokeCardId" + i).classList.remove("displayNone");
-    } else {
-      i >= page * qOnPage && i < page * qOnPage + qOnPage
+    } else {i >= page * qOnPage && i < page * qOnPage + qOnPage
         ? document.getElementById("pokeCardId" + i).classList.add("displayNone")
         : "";
     }
@@ -66,15 +69,11 @@ function findValue(j, myName) {
   for (i = 0; i < pokemons.length; i++) {
     if (pokemons[i].name.match(myName.toLowerCase())) {
       i >= page * qOnPage && i < page * qOnPage + qOnPage
-        ? document
-            .getElementById("pokeCardId" + i)
-            .classList.remove("displayNone")
-        : "";
+        ? document.getElementById("pokeCardId" + i).classList.remove("displayNone") : "";
       j = j + 1;
     } else {
       i >= page * qOnPage && i < page * qOnPage + qOnPage
-        ? document.getElementById("pokeCardId" + i).classList.add("displayNone")
-        : "";
+        ? document.getElementById("pokeCardId" + i).classList.add("displayNone") : "";
     }
   }
   return j;
@@ -87,21 +86,21 @@ async function setCardsCounter(j) {
 }
 
 async function nextPage() {
-  const myButton= document.getElementById('pagesSelectorId')
-  myButton.classList.add('dontTouch')
+  const myButton = document.getElementById("pagesSelectorId");
+  myButton.classList.add("dontTouch");
   page + 1 > fullSides - 1 ? (page = 0) : page++;
   renderPagesbuttons();
   await myPokemonList();
-  myButton.classList.remove('dontTouch')
+  myButton.classList.remove("dontTouch");
 }
 
 async function backPage() {
-  const myButton= document.getElementById('pagesSelectorId')
-  myButton.classList.add('dontTouch')
+  const myButton = document.getElementById("pagesSelectorId");
+  myButton.classList.add("dontTouch");
   page <= 0 ? (page = fullSides - 1) : page--;
   renderPagesbuttons();
   await myPokemonList();
-  myButton.classList.remove('dontTouch')
+  myButton.classList.remove("dontTouch");
 }
 
 function myToggle(id) {
@@ -114,13 +113,15 @@ async function loaderOn() {
   document.getElementById("loader").classList.remove("displayNone");
   document.getElementById("loaderCounter").classList.remove("displayNone");
   document.getElementById("loaderCounter").innerHTML = "0%";
-  await myPromiseFunction(200)
+  await myPromiseFunction(200);
 }
+
 async function loaderOff() {
-  await myPromiseFunction(200)
+  await myPromiseFunction(200);
   document.getElementById("loader").classList.add("displayNone");
   document.getElementById("loaderCounter").classList.add("displayNone");
 }
+
 function myPromiseFunction(wait) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {

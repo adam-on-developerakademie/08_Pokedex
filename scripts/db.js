@@ -12,17 +12,10 @@ let stats=['hp','attack','defense','specialAttack','specialDefense','speed']
 
 let properties = [
   {
-    imageLarge: [
-      true,
-      'data.sprites.other["official-artwork"]["front_default"]',
-    ],
-    imageLargeShiny: [
-      true,
-      'data.sprites.other["official-artwork"]["front_shiny"]',
-    ],
+    imageLarge: [true, 'data.sprites.other["official-artwork"]["front_default"]',],
+    imageLargeShiny: [true, 'data.sprites.other["official-artwork"]["front_shiny"]',],
     typeSlot1: [true, "data.types[0].type.name"],
     typeSlot2: ["data.types.length == 2", "data.types[1].type.name"],
-
     imageFrontGif: [true, 'data.sprites.other.showdown["front_default"]'],
     height: [true, "data.height"],
     weight: [true, "data.weight"],
