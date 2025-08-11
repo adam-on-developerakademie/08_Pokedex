@@ -78,7 +78,7 @@ function overlayTamplate(i) {
  </div>
  </div>
  <div class="overlayViewNavId">
- <button id="nextViewButton" class="overlayButton" onclick="nextView (${i})">details side ${currentView}</button>
+ <button id="nextViewButton" class="overlayButton" onclick="nextView (${i})">details side ${currentView}/3</button>
  <div id="overlayViewId"></div>
  </div>
 `;
