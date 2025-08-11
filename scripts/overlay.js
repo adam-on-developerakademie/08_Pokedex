@@ -2,17 +2,17 @@ function overlayLoad(i) {
   let overlay = document.getElementById("overlayId");
   overlay.classList.remove("displayNone");
   overlay.innerHTML = overlayTamplate(i);  
-  eval(`OverlayInfoView${currentView}(${i})`);
+  eval(`detailsSide${currentView}(${i})`);
   document.getElementById('previousPokemonButton').classList.add(pokemons[i].typeSlot1+'Card')
   document.getElementById('nextPokemonButton').classList.add(pokemons[i].typeSlot1+'Card')
   document.getElementById('nextViewButton').classList.add(pokemons[i].typeSlot1+'Card')
 }
 
-function OverlayInfoView0(i) {
+function detailsSide1 (i) {
   document.getElementById("overlayViewId").innerHTML = attributesTamplate(i);
 }
 
-function OverlayInfoView1(i) {
+function detailsSide2 (i) {
   document.getElementById("overlayViewId").innerHTML = statsTamplate(i);
   makeBlock();
   fillBlock(i);
@@ -22,17 +22,17 @@ function OverlayInfoView1(i) {
   ).innerHTML = `<img id="overlayImageId" src="${pokemons[i].imageLargeShiny}" alt="Overlay Image"></img>`;
 }
 
-function OverlayInfoView2(i) {
+function detailsSide3 (i) {
   document.getElementById("overlayViewId").innerHTML = shinyTamplate(i);
 }
 
 function previousView(i) {
-  currentView == 0 ? (currentView = 2) : currentView--;
+  currentView == 1 ? (currentView = 3) : currentView--;
   overlayLoad(i);
 }
 
 function nextView(i) {
-  currentView == 2 ? (currentView = 0) : currentView++;
+  currentView == 3 ? (currentView = 1) : currentView++;
   overlayLoad(i);
 }
 

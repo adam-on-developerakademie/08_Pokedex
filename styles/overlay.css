@@ -120,6 +120,7 @@
 
 button{
    font-family: Pokemon-Bold;
+   cursor: pointer;
 }
 
 .changePokemon {

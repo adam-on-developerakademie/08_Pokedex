@@ -7,7 +7,7 @@ let wild = false;
 let qOnPage = 100;
 let currentCard;
 let readyNow=false
-let currentView=0
+let currentView=1
 let stats=['hp','attack','defense','specialAttack','specialDefense','speed']
 
 let properties = [
